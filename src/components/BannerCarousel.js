@@ -1,6 +1,7 @@
 // src/components/BannerCarousel.js
 import React, { useRef, useState, useEffect } from 'react';
 import { View, FlatList, Image, Dimensions, StyleSheet, Animated } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import colors from '../config/colors';
 
 const { width } = Dimensions.get('window');
@@ -23,7 +24,13 @@ export default function BannerCarousel({ banners }) {
   }, [activeIndex, banners.length]);
 
   const renderBanner = ({ item }) => (
-    <Image source={item.image} style={styles.bannerImage} resizeMode="cover" />
+    <View style={styles.bannerWrapper}>
+      <Image source={item.image} style={styles.bannerImage} resizeMode="cover" />
+      <LinearGradient
+        colors={['rgba(0,0,0,0.3)', 'transparent']}
+        style={styles.gradientOverlay}
+      />
+    </View>
   );
 
   const onScroll = Animated.event(
@@ -49,20 +56,23 @@ export default function BannerCarousel({ banners }) {
         }}
       />
 
-      {/* Dots */}
+      {/* Animated Dots */}
       <View style={styles.dotsContainer}>
-        {banners.map((_, index) => (
-          <View
-            key={index}
-            style={[
-              styles.dot,
-              {
-                backgroundColor:
-                  index === activeIndex ? colors.primary : colors.border,
-              },
-            ]}
-          />
-        ))}
+        {banners.map((_, index) => {
+          const scale = activeIndex === index ? 1.3 : 1;
+          return (
+            <Animated.View
+              key={index}
+              style={[
+                styles.dot,
+                {
+                  backgroundColor: activeIndex === index ? colors.primary : colors.border,
+                  transform: [{ scale }],
+                },
+              ]}
+            />
+          );
+        })}
       </View>
     </View>
   );
@@ -72,18 +82,30 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 10,
   },
-  bannerImage: {
+  bannerWrapper: {
     width: width - 40,
     height: 180,
     borderRadius: 12,
     marginHorizontal: 20,
-    borderWidth: 2,                  // Added border
-    borderColor: colors.primary,     // Use primary color for elegant look
+    overflow: 'hidden', // Ensures gradient and image respect border radius
+    borderWidth: 2,
+    borderColor: colors.primary,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 6,
     elevation: 5,
+  },
+  bannerImage: {
+    width: '100%',
+    height: '100%',
+  },
+  gradientOverlay: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
   },
   dotsContainer: {
     flexDirection: 'row',

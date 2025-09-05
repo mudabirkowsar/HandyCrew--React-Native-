@@ -39,37 +39,41 @@ export default function SearchBar() {
   });
 
   return (
-    <Animated.View style={[styles.container, { borderColor }]}>
-      <Ionicons
-        name="search"
-        size={22}
-        color={focused ? colors.primary : colors.gray}
-        style={{ marginRight: 10 }}
-      />
-      <TextInput
-        placeholder="Search for services..."
-        placeholderTextColor={colors.gray}
-        style={styles.input}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      />
-      <TouchableOpacity activeOpacity={0.7}>
-        <MaterialIcons
-          name="keyboard-voice"
+    <View style={styles.outerContainer}>
+      <Animated.View style={[styles.container, { borderColor }]}>
+        <Ionicons
+          name="search"
           size={22}
           color={focused ? colors.primary : colors.gray}
+          style={{ marginRight: 10 }}
         />
-      </TouchableOpacity>
-    </Animated.View>
+        <TextInput
+          placeholder="Search for services..."
+          placeholderTextColor={colors.gray}
+          style={styles.input}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+        <TouchableOpacity activeOpacity={0.7}>
+          <MaterialIcons
+            name="keyboard-voice"
+            size={22}
+            color={focused ? colors.primary : colors.gray}
+          />
+        </TouchableOpacity>
+      </Animated.View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  outerContainer: {
+    backgroundColor: colors.background || '#f2f2f2', // You can change the background here
+    paddingHorizontal: 15,
+    paddingTop:40,
+    paddingBottom:10,
+  },
   container: {
-    position: 'absolute',
-    top: 12,
-    left: 15,
-    right: 15,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: colors.cardBackground,

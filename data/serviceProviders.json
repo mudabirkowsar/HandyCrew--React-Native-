@@ -1,1657 +1,1314 @@
 [
-    {
-        "id": 1,
-        "name": "Ramesh Kumar",
-        "serviceType": "Plumber",
-        "experience": 5,
-        "rating": 4.7,
-        "pricePerHour": 25,
-        "phone": "+91-9876543210",
-        "email": "ramesh.plumber@example.com",
-        "location": {
-            "city": "New Delhi",
-            "state": "Delhi",
-            "zipcode": "110001",
-            "latitude": 28.6139,
-            "longitude": 77.2090
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_incoming&w=740&q=80",
-        "servicesOffered": [
-            "Leak Repair",
-            "Pipe Replacement",
-            "Drain Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Ankit Sharma",
-                "rating": 5,
-                "comment": "Excellent service!"
-            },
-            {
-                "user": "Priya Singh",
-                "rating": 4,
-                "comment": "Good work."
-            }
-        ]
+  {
+    "id": 4001,
+    "name": "Ramesh Kumar",
+    "serviceType": "Plumber",
+    "experience": 5,
+    "rating": 4.7,
+    "pricePerHour": 25,
+    "phone": "+91-9876543210",
+    "email": "ramesh.plumber@example.com",
+    "location": {
+      "city": "New Delhi",
+      "state": "Delhi",
+      "zipcode": "110001",
+      "latitude": 28.6139,
+      "longitude": 77.2090
     },
-    {
-        "id": 2,
-        "name": "Sunita Verma",
-        "serviceType": "Electrician",
-        "experience": 7,
-        "rating": 4.8,
-        "pricePerHour": 30,
-        "phone": "+91-9123456780",
-        "email": "sunita.electrician@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122001",
-            "latitude": 28.4595,
-            "longitude": 77.0266
-        },
-        "availability": {
-            "monday": "10:00-19:00",
-            "tuesday": "10:00-19:00",
-            "wednesday": "10:00-19:00",
-            "thursday": "10:00-19:00",
-            "friday": "10:00-19:00",
-            "saturday": "10:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_incoming&w=740&q=80",
-        "servicesOffered": [
-            "Wiring",
-            "Light Installation",
-            "Fan & AC Repair"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rohit Gupta",
-                "rating": 5,
-                "comment": "Very professional!"
-            },
-            {
-                "user": "Neha Kapoor",
-                "rating": 4,
-                "comment": "Good service."
-            }
-        ]
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 3,
-        "name": "Amit Singh",
-        "serviceType": "Mechanical",
-        "experience": 6,
-        "rating": 4.5,
-        "pricePerHour": 40,
-        "phone": "+91-9988776655",
-        "email": "amit.mechanical@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201301",
-            "latitude": 28.5355,
-            "longitude": 77.3910
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg?semt=ais_incoming&w=740&q=80",
-        "servicesOffered": [
-            "Car Repair",
-            "Bike Repair",
-            "Engine Diagnostics"
-        ],
-        "isVerified": false,
-        "reviews": [
-            {
-                "user": "Vikas Rao",
-                "rating": 5,
-                "comment": "Fixed my car engine quickly!"
-            },
-            {
-                "user": "Sonia Mehta",
-                "rating": 4,
-                "comment": "Good work."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1585747861815-0468f061d4f4?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Leak Repair", "Pipe Replacement", "Drain Cleaning"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Ankit Sharma",
+        "rating": 5,
+        "comment": "Excellent service, quick response!"
+      },
+      {
+        "user": "Priya Singh",
+        "rating": 4,
+        "comment": "Good work, arrived on time."
+      }
+    ]
+  },
+  {
+    "id": 4002,
+    "name": "Vikram Singh",
+    "serviceType": "Plumber",
+    "experience": 7,
+    "rating": 4.7,
+    "pricePerHour": 26,
+    "phone": "+91-9109876543",
+    "email": "vikram.plumber@example.com",
+    "location": {
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zipcode": "560001",
+      "latitude": 12.9716,
+      "longitude": 77.5946
     },
-    {
-        "id": 4,
-        "name": "Neha Sharma",
-        "serviceType": "AC & Cooling",
-        "experience": 4,
-        "rating": 4.6,
-        "pricePerHour": 35,
-        "phone": "+91-9871234560",
-        "email": "neha.ac@example.com",
-        "location": {
-            "city": "New Delhi",
-            "state": "Delhi",
-            "zipcode": "110002",
-            "latitude": 28.6130,
-            "longitude": 77.2200
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://t4.ftcdn.net/jpg/11/66/06/77/360_F_1166067709_2SooAuPWXp20XkGev7oOT7nuK1VThCsN.jpg",
-        "servicesOffered": [
-            "AC Repair",
-            "AC Installation",
-            "Maintenance"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Manish Jain",
-                "rating": 5,
-                "comment": "Great AC repair service!"
-            },
-            {
-                "user": "Alka Rao",
-                "rating": 4,
-                "comment": "Good job."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 5,
-        "name": "Rajesh Mehta",
-        "serviceType": "Carpentry",
-        "experience": 8,
-        "rating": 4.4,
-        "pricePerHour": 28,
-        "phone": "+91-9123789456",
-        "email": "rajesh.carpentry@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122002",
-            "latitude": 28.4600,
-            "longitude": 77.0300
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://t4.ftcdn.net/jpg/11/66/06/77/360_F_1166067709_2SooAuPWXp20XkGev7oOT7nuK1VThCsN.jpg",
-        "servicesOffered": [
-            "Furniture Repair",
-            "Door/Window Installation",
-            "Woodwork"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Anjali Sinha",
-                "rating": 5,
-                "comment": "Excellent craftsmanship!"
-            },
-            {
-                "user": "Pankaj Sharma",
-                "rating": 4,
-                "comment": "Very skilled."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Tap Repair", "Bathroom Fitting", "Water Tank Cleaning"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Rahul Sharma",
+        "rating": 5,
+        "comment": "Quick and efficient service!"
+      },
+      {
+        "user": "Pooja Reddy",
+        "rating": 4,
+        "comment": "Professional work."
+      }
+    ]
+  },
+  {
+    "id": 4003,
+    "name": "Pooja Reddy",
+    "serviceType": "Plumber",
+    "experience": 6,
+    "rating": 4.7,
+    "pricePerHour": 24,
+    "phone": "+91-8470123456",
+    "email": "pooja.plumber@example.com",
+    "location": {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipcode": "500004",
+      "latitude": 17.4065,
+      "longitude": 78.4772
     },
-    {
-        "id": 6,
-        "name": "Priya Singh",
-        "serviceType": "Cleaning",
-        "experience": 3,
-        "rating": 4.5,
-        "pricePerHour": 20,
-        "phone": "+91-9876541230",
-        "email": "priya.cleaning@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201302",
-            "latitude": 28.5360,
-            "longitude": 77.3920
-        },
-        "availability": {
-            "monday": "09:00-17:00",
-            "tuesday": "09:00-17:00",
-            "wednesday": "09:00-17:00",
-            "thursday": "09:00-17:00",
-            "friday": "09:00-17:00",
-            "saturday": "09:00-13:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://t4.ftcdn.net/jpg/11/66/06/77/360_F_1166067709_2SooAuPWXp20XkGev7oOT7nuK1VThCsN.jpg",
-        "servicesOffered": [
-            "Home Cleaning",
-            "Office Cleaning",
-            "Carpet Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rajat Kapoor",
-                "rating": 5,
-                "comment": "Excellent cleaning!"
-            },
-            {
-                "user": "Simran Kaur",
-                "rating": 4,
-                "comment": "Very thorough."
-            }
-        ]
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 7,
-        "name": "Vikram Patel",
-        "serviceType": "Plumber",
-        "experience": 6,
-        "rating": 4.6,
-        "pricePerHour": 27,
-        "phone": "+91-9123459870",
-        "email": "vikram.plumber@example.com",
-        "location": {
-            "city": "Delhi",
-            "state": "Delhi",
-            "zipcode": "110003",
-            "latitude": 28.6140,
-            "longitude": 77.2100
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796",
-        "servicesOffered": [
-            "Leak Repair",
-            "Pipe Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Kiran Rao",
-                "rating": 5,
-                "comment": "Highly recommended!"
-            },
-            {
-                "user": "Suresh Kumar",
-                "rating": 4,
-                "comment": "Good work."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Pipe Installation", "Water Heater Repair", "Sewage Line Cleaning"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Kiran Kumar",
+        "rating": 5,
+        "comment": "Efficient and professional!"
+      },
+      {
+        "user": "Suman Latha",
+        "rating": 4,
+        "comment": "Fixed leakage issue permanently."
+      }
+    ]
+  },
+  {
+    "id": 4004,
+    "name": "Mohit Sharma",
+    "serviceType": "Plumber",
+    "experience": 8,
+    "rating": 4.8,
+    "pricePerHour": 28,
+    "phone": "+91-7890123456",
+    "email": "mohit.plumber@example.com",
+    "location": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipcode": "400001",
+      "latitude": 19.0760,
+      "longitude": 72.8777
     },
-    {
-        "id": 8,
-        "name": "Meena Das",
-        "serviceType": "Electrician",
-        "experience": 5,
-        "rating": 4.7,
-        "pricePerHour": 32,
-        "phone": "+91-9873216540",
-        "email": "meena.electrician@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122003",
-            "latitude": 28.4610,
-            "longitude": 77.0270
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796",
-        "servicesOffered": [
-            "Wiring",
-            "Fan Repair",
-            "Light Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Anil Kumar",
-                "rating": 5,
-                "comment": "Excellent electrician!"
-            },
-            {
-                "user": "Rina Sharma",
-                "rating": 4,
-                "comment": "Quick response."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-13:00",
+      "sunday": "Off"
     },
-    {
-        "id": 9,
-        "name": "Arjun Rao",
-        "serviceType": "Mechanical",
-        "experience": 7,
-        "rating": 4.6,
-        "pricePerHour": 42,
-        "phone": "+91-9988771234",
-        "email": "arjun.mechanical@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201303",
-            "latitude": 28.5370,
-            "longitude": 77.3930
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796",
-        "servicesOffered": [
-            "Bike Repair",
-            "Car Engine Repair"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Neeraj Gupta",
-                "rating": 5,
-                "comment": "Very skilled!"
-            },
-            {
-                "user": "Tina Mehta",
-                "rating": 4,
-                "comment": "Good service."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Bathroom Renovation", "Water Pump Installation", "Pipeline Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Rajiv Mehta",
+        "rating": 5,
+        "comment": "Expert plumbing solutions!"
+      },
+      {
+        "user": "Neha Patel",
+        "rating": 5,
+        "comment": "Professional and punctual."
+      }
+    ]
+  },
+  {
+    "id": 4005,
+    "name": "Sunita Verma",
+    "serviceType": "Electrician",
+    "experience": 7,
+    "rating": 4.8,
+    "pricePerHour": 30,
+    "phone": "+91-9123456780",
+    "email": "sunita.electrician@example.com",
+    "location": {
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "zipcode": "122001",
+      "latitude": 28.4595,
+      "longitude": 77.0266
     },
-    {
-        "id": 10,
-        "name": "Seema Kapoor",
-        "serviceType": "AC & Cooling",
-        "experience": 5,
-        "rating": 4.5,
-        "pricePerHour": 36,
-        "phone": "+91-9123451122",
-        "email": "seema.ac@example.com",
-        "location": {
-            "city": "Delhi",
-            "state": "Delhi",
-            "zipcode": "110004",
-            "latitude": 28.6150,
-            "longitude": 77.2120
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796",
-        "servicesOffered": [
-            "AC Installation",
-            "AC Maintenance"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rohini Singh",
-                "rating": 5,
-                "comment": "Excellent AC service!"
-            },
-            {
-                "user": "Rakesh Jain",
-                "rating": 4,
-                "comment": "Good technician."
-            }
-        ]
+    "availability": {
+      "monday": "10:00-19:00",
+      "tuesday": "10:00-19:00",
+      "wednesday": "10:00-19:00",
+      "thursday": "10:00-19:00",
+      "friday": "10:00-19:00",
+      "saturday": "10:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 11,
-        "name": "Karan Verma",
-        "serviceType": "Carpentry",
-        "experience": 6,
-        "rating": 4.6,
-        "pricePerHour": 30,
-        "phone": "+91-9876548890",
-        "email": "karan.carpentry@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122004",
-            "latitude": 28.4620,
-            "longitude": 77.0280
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://cdna.artstation.com/p/assets/images/images/040/951/926/large/maddie_creates-jj-ver2.jpg?1630351796",
-        "servicesOffered": [
-            "Furniture Making",
-            "Wood Repairs"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Sunita Mehta",
-                "rating": 5,
-                "comment": "Highly skilled!"
-            },
-            {
-                "user": "Ajay Kumar",
-                "rating": 4,
-                "comment": "Good work."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Wiring", "Light Installation", "Fan & AC Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Rohit Gupta",
+        "rating": 5,
+        "comment": "Very professional and skilled!"
+      },
+      {
+        "user": "Neha Kapoor",
+        "rating": 4,
+        "comment": "Good service, reasonable price."
+      }
+    ]
+  },
+  {
+    "id": 4006,
+    "name": "Sneha Gupta",
+    "serviceType": "Electrician",
+    "experience": 6,
+    "rating": 4.6,
+    "pricePerHour": 28,
+    "phone": "+91-9210987654",
+    "email": "sneha.electrician@example.com",
+    "location": {
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipcode": "411001",
+      "latitude": 18.5204,
+      "longitude": 73.8567
     },
-    {
-        "id": 12,
-        "name": "Alok Sharma",
-        "serviceType": "Cleaning",
-        "experience": 4,
-        "rating": 4.5,
-        "pricePerHour": 22,
-        "phone": "+91-9988772244",
-        "email": "alok.cleaning@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201304",
-            "latitude": 28.5380,
-            "longitude": 77.3940
-        },
-        "availability": {
-            "monday": "09:00-17:00",
-            "tuesday": "09:00-17:00",
-            "wednesday": "09:00-17:00",
-            "thursday": "09:00-17:00",
-            "friday": "09:00-17:00",
-            "saturday": "09:00-13:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/premium-vector/avatar-portrait-kid-caucasian-boy-round-frame-vector-illustration-cartoon-flat-style_551425-43.jpg",
-        "servicesOffered": [
-            "Home Cleaning",
-            "Office Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Ritu Gupta",
-                "rating": 5,
-                "comment": "Very professional!"
-            },
-            {
-                "user": "Deepak Singh",
-                "rating": 4,
-                "comment": "Good cleaning service."
-            }
-        ]
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
     },
-    {
-        "id": 13,
-        "name": "Pooja Rani",
-        "serviceType": "Plumber",
-        "experience": 5,
-        "rating": 4.7,
-        "pricePerHour": 26,
-        "phone": "+91-9876543321",
-        "email": "pooja.plumber@example.com",
-        "location": {
-            "city": "Delhi",
-            "state": "Delhi",
-            "zipcode": "110005",
-            "latitude": 28.6160,
-            "longitude": 77.2130
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0hyeCvOHgv7ffth6xFI2ljMg9wAw8sseYQX7sFXhwYa3gCVVOMMvUaWWmTkGkk46x-Wg&usqp=CAU",
-        "servicesOffered": [
-            "Pipe Fixing",
-            "Drain Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Kajal Mehta",
-                "rating": 5,
-                "comment": "Excellent plumber!"
-            },
-            {
-                "user": "Rohan Singh",
-                "rating": 4,
-                "comment": "Good job."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Switch Repair", "Wiring", "Inverter Installation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Amit Deshpande",
+        "rating": 5,
+        "comment": "Knowledgeable and efficient!"
+      },
+      {
+        "user": "Nandini Rao",
+        "rating": 4,
+        "comment": "Fixed all electrical issues."
+      }
+    ]
+  },
+  {
+    "id": 4007,
+    "name": "Ravi Shankar",
+    "serviceType": "Electrician",
+    "experience": 9,
+    "rating": 4.8,
+    "pricePerHour": 32,
+    "phone": "+91-8567012345",
+    "email": "ravi.electrician@example.com",
+    "location": {
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "zipcode": "700001",
+      "latitude": 22.5726,
+      "longitude": 88.3639
     },
-    {
-        "id": 14,
-        "name": "Sanjay Gupta",
-        "serviceType": "Electrician",
-        "experience": 6,
-        "rating": 4.6,
-        "pricePerHour": 31,
-        "phone": "+91-9123456677",
-        "email": "sanjay.electrician@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122005",
-            "latitude": 28.4630,
-            "longitude": 77.0290
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0hyeCvOHgv7ffth6xFI2ljMg9wAw8sseYQX7sFXhwYa3gCVVOMMvUaWWmTkGkk46x-Wg&usqp=CAU",
-        "servicesOffered": [
-            "Fan Repair",
-            "Light Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Ritika Sharma",
-                "rating": 5,
-                "comment": "Very professional!"
-            },
-            {
-                "user": "Anil Verma",
-                "rating": 4,
-                "comment": "Good service."
-            }
-        ]
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
     },
-    {
-        "id": 15,
-        "name": "Rohit Mehra",
-        "serviceType": "Mechanical",
-        "experience": 7,
-        "rating": 4.5,
-        "pricePerHour": 43,
-        "phone": "+91-9988775566",
-        "email": "rohit.mechanical@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201305",
-            "latitude": 28.5390,
-            "longitude": 77.3950
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0hyeCvOHgv7ffth6xFI2ljMg9wAw8sseYQX7sFXhwYa3gCVVOMMvUaWWmTkGkk46x-Wg&usqp=CAU",
-        "servicesOffered": [
-            "Car Repair",
-            "Engine Diagnostics"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Suman Rao",
-                "rating": 5,
-                "comment": "Excellent mechanic!"
-            },
-            {
-                "user": "Tanya Singh",
-                "rating": 4,
-                "comment": "Good service."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Electrical Inspection", "Panel Upgrade", "Emergency Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Amitava Roy",
+        "rating": 5,
+        "comment": "Solved complex electrical problems!"
+      },
+      {
+        "user": "Sushmita Das",
+        "rating": 5,
+        "comment": "Knowledgeable and professional."
+      }
+    ]
+  },
+  {
+    "id": 4008,
+    "name": "Anil Kumar",
+    "serviceType": "Electrician",
+    "experience": 10,
+    "rating": 4.9,
+    "pricePerHour": 35,
+    "phone": "+91-7789012345",
+    "email": "anil.electrician@example.com",
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "zipcode": "600001",
+      "latitude": 13.0827,
+      "longitude": 80.2707
     },
-    {
-        "id": 16,
-        "name": "Alisha Sharma",
-        "serviceType": "AC & Cooling",
-        "experience": 4,
-        "rating": 4.6,
-        "pricePerHour": 37,
-        "phone": "+91-9123457788",
-        "email": "alisha.ac@example.com",
-        "location": {
-            "city": "Delhi",
-            "state": "Delhi",
-            "zipcode": "110006",
-            "latitude": 28.6170,
-            "longitude": 77.2140
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/premium-vector/cartoon-character-features-young-man-smiling-wearing-blue-shirt-against-solid-background-select-customizable-cartoon-illustration_538213-159086.jpg",
-        "servicesOffered": [
-            "AC Repair",
-            "AC Maintenance"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Ritika Jain",
-                "rating": 5,
-                "comment": "Great service!"
-            },
-            {
-                "user": "Ajay Verma",
-                "rating": 4,
-                "comment": "Good AC repair."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 17,
-        "name": "Manish Kumar",
-        "serviceType": "Carpentry",
-        "experience": 5,
-        "rating": 4.5,
-        "pricePerHour": 29,
-        "phone": "+91-9876549988",
-        "email": "manish.carpentry@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122006",
-            "latitude": 28.4640,
-            "longitude": 77.0305
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/premium-vector/cartoon-character-features-young-man-smiling-wearing-blue-shirt-against-solid-background-select-customizable-cartoon-illustration_538213-159086.jpg",
-        "servicesOffered": [
-            "Furniture Making",
-            "Door Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Sunil Sharma",
-                "rating": 5,
-                "comment": "Excellent carpenter!"
-            },
-            {
-                "user": "Neha Singh",
-                "rating": 4,
-                "comment": "Good work."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Industrial Wiring", "Generator Repair", "Solar Installation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Karthik M",
+        "rating": 5,
+        "comment": "Expert in industrial electrical systems!"
+      },
+      {
+        "user": "Divya R",
+        "rating": 5,
+        "comment": "Professional and reliable service."
+      }
+    ]
+  },
+  {
+    "id": 4009,
+    "name": "Rajesh Nair",
+    "serviceType": "Mechanical",
+    "experience": 10,
+    "rating": 4.8,
+    "pricePerHour": 32,
+    "phone": "+91-9321098765",
+    "email": "rajesh.mechanical@example.com",
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "zipcode": "600001",
+      "latitude": 13.0827,
+      "longitude": 80.2707
     },
-    {
-        "id": 18,
-        "name": "Simran Kaur",
-        "serviceType": "Cleaning",
-        "experience": 3,
-        "rating": 4.5,
-        "pricePerHour": 21,
-        "phone": "+91-9988773344",
-        "email": "simran.cleaning@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201306",
-            "latitude": 28.5400,
-            "longitude": 77.3960
-        },
-        "availability": {
-            "monday": "09:00-17:00",
-            "tuesday": "09:00-17:00",
-            "wednesday": "09:00-17:00",
-            "thursday": "09:00-17:00",
-            "friday": "09:00-17:00",
-            "saturday": "09:00-13:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/premium-vector/cartoon-character-features-young-man-smiling-wearing-blue-shirt-against-solid-background-select-customizable-cartoon-illustration_538213-159086.jpg",
-        "servicesOffered": [
-            "Home Cleaning",
-            "Office Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Ritu Sharma",
-                "rating": 5,
-                "comment": "Very professional!"
-            },
-            {
-                "user": "Vikram Singh",
-                "rating": 4,
-                "comment": "Good cleaning."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 19,
-        "name": "Deepak Verma",
-        "serviceType": "Plumber",
-        "experience": 6,
-        "rating": 4.6,
-        "pricePerHour": 28,
-        "phone": "+91-9123459900",
-        "email": "deepak.plumber@example.com",
-        "location": {
-            "city": "Delhi",
-            "state": "Delhi",
-            "zipcode": "110007",
-            "latitude": 28.6180,
-            "longitude": 77.2150
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-12:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://img.freepik.com/premium-vector/cartoon-character-features-young-man-smiling-wearing-blue-shirt-against-solid-background-select-customizable-cartoon-illustration_538213-159086.jpg",
-        "servicesOffered": [
-            "Leak Repair",
-            "Pipe Replacement"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Anjali Mehta",
-                "rating": 5,
-                "comment": "Excellent plumber!"
-            },
-            {
-                "user": "Rakesh Gupta",
-                "rating": 4,
-                "comment": "Good work."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Appliance Repair", "Machine Maintenance", "Equipment Installation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Suresh Kumar",
+        "rating": 5,
+        "comment": "Excellent mechanical skills!"
+      },
+      {
+        "user": "Lakshmi Iyer",
+        "rating": 4,
+        "comment": "Quality workmanship."
+      }
+    ]
+  },
+  {
+    "id": 4010,
+    "name": "Vijay Malhotra",
+    "serviceType": "Mechanical",
+    "experience": 8,
+    "rating": 4.7,
+    "pricePerHour": 30,
+    "phone": "+91-8765432109",
+    "email": "vijay.mechanical@example.com",
+    "location": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipcode": "400001",
+      "latitude": 19.0760,
+      "longitude": 72.8777
     },
-    {
-        "id": 1002,
-        "name": "Arun Singh",
-        "serviceType": "Carpenter",
-        "experience": 8,
-        "rating": 4.6,
-        "pricePerHour": 28,
-        "phone": "+91-9765432109",
-        "email": "arun.carpenter@example.com",
-        "location": {
-            "city": "Noida",
-            "state": "Uttar Pradesh",
-            "zipcode": "201301",
-            "latitude": 28.5355,
-            "longitude": 77.3910
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-13:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Furniture Repair",
-            "Custom Furniture",
-            "Door Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rajesh Mehta",
-                "rating": 5,
-                "comment": "Excellent craftsmanship!"
-            },
-            {
-                "user": "Sneha Patel",
-                "rating": 4,
-                "comment": "Good work, would hire again."
-            }
-        ]
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
     },
-    {
-        "id": 1003,
-        "name": "Priya Desai",
-        "serviceType": "Painter",
-        "experience": 6,
-        "rating": 4.5,
-        "pricePerHour": 22,
-        "phone": "+91-9654321098",
-        "email": "priya.painter@example.com",
-        "location": {
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "zipcode": "400001",
-            "latitude": 19.0760,
-            "longitude": 72.8777
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-15:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Wall Painting",
-            "Texture Painting",
-            "Waterproofing"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Vikram Malhotra",
-                "rating": 5,
-                "comment": "Neat and clean work!"
-            },
-            {
-                "user": "Anjali Joshi",
-                "rating": 4,
-                "comment": "Good color suggestions."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Washing Machine Repair", "Refrigerator Service", "Microwave Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Sanjay Patel",
+        "rating": 5,
+        "comment": "Fixed my washing machine perfectly!"
+      },
+      {
+        "user": "Meena Shah",
+        "rating": 4,
+        "comment": "Good service, reasonable charges."
+      }
+    ]
+  },
+  {
+    "id": 4011,
+    "name": "Priya Deshmukh",
+    "serviceType": "Mechanical",
+    "experience": 7,
+    "rating": 4.6,
+    "pricePerHour": 28,
+    "phone": "+91-7654321098",
+    "email": "priya.mechanical@example.com",
+    "location": {
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipcode": "411001",
+      "latitude": 18.5204,
+      "longitude": 73.8567
     },
-    {
-        "id": 1004,
-        "name": "Mohammed Khan",
-        "serviceType": "AC Technician",
-        "experience": 9,
-        "rating": 4.9,
-        "pricePerHour": 35,
-        "phone": "+91-9543210987",
-        "email": "mohammed.actech@example.com",
-        "location": {
-            "city": "Hyderabad",
-            "state": "Telangana",
-            "zipcode": "500001",
-            "latitude": 17.3850,
-            "longitude": 78.4867
-        },
-        "availability": {
-            "monday": "08:00-19:00",
-            "tuesday": "08:00-19:00",
-            "wednesday": "08:00-19:00",
-            "thursday": "08:00-19:00",
-            "friday": "08:00-19:00",
-            "saturday": "08:00-16:00",
-            "sunday": "10:00-14:00"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "AC Repair",
-            "AC Service",
-            "Gas Charging"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Abdul Rahman",
-                "rating": 5,
-                "comment": "Expert in AC repair!"
-            },
-            {
-                "user": "Laxmi Nair",
-                "rating": 5,
-                "comment": "Fixed my AC quickly."
-            }
-        ]
+    "availability": {
+      "monday": "10:00-19:00",
+      "tuesday": "10:00-19:00",
+      "wednesday": "10:00-19:00",
+      "thursday": "10:00-19:00",
+      "friday": "10:00-19:00",
+      "saturday": "10:00-16:00",
+      "sunday": "Off"
     },
-    {
-        "id": 1005,
-        "name": "Anjali Patel",
-        "serviceType": "Beautician",
-        "experience": 5,
-        "rating": 4.7,
-        "pricePerHour": 20,
-        "phone": "+91-9432109876",
-        "email": "anjali.beauty@example.com",
-        "location": {
-            "city": "Ahmedabad",
-            "state": "Gujarat",
-            "zipcode": "380001",
-            "latitude": 23.0225,
-            "longitude": 72.5714
-        },
-        "availability": {
-            "monday": "10:00-19:00",
-            "tuesday": "10:00-19:00",
-            "wednesday": "10:00-19:00",
-            "thursday": "10:00-19:00",
-            "friday": "10:00-19:00",
-            "saturday": "10:00-18:00",
-            "sunday": "10:00-14:00"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Facial",
-            "Waxing",
-            "Manicure",
-            "Pedicure"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Meera Shah",
-                "rating": 5,
-                "comment": "Best facial in town!"
-            },
-            {
-                "user": "Divya Mehta",
-                "rating": 4,
-                "comment": "Gentle and professional."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Kitchen Appliance Repair", "Mixer Service", "Grinder Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Anjali Kulkarni",
+        "rating": 5,
+        "comment": "Expert in kitchen appliances!"
+      },
+      {
+        "user": "Rahul Desai",
+        "rating": 4,
+        "comment": "Fixed my mixer quickly."
+      }
+    ]
+  },
+  {
+    "id": 4012,
+    "name": "Amit Singh",
+    "serviceType": "Mechanical",
+    "experience": 9,
+    "rating": 4.8,
+    "pricePerHour": 33,
+    "phone": "+91-6543210987",
+    "email": "amit.mechanical@example.com",
+    "location": {
+      "city": "Delhi",
+      "state": "Delhi",
+      "zipcode": "110001",
+      "latitude": 28.6139,
+      "longitude": 77.2090
     },
-    {
-        "id": 1006,
-        "name": "Rajesh Nair",
-        "serviceType": "Carpenter",
-        "experience": 10,
-        "rating": 4.8,
-        "pricePerHour": 32,
-        "phone": "+91-9321098765",
-        "email": "rajesh.carpenter@example.com",
-        "location": {
-            "city": "Chennai",
-            "state": "Tamil Nadu",
-            "zipcode": "600001",
-            "latitude": 13.0827,
-            "longitude": 80.2707
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Furniture Making",
-            "Cabinet Repair",
-            "Wood Polishing"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Suresh Kumar",
-                "rating": 5,
-                "comment": "Excellent wood work!"
-            },
-            {
-                "user": "Lakshmi Iyer",
-                "rating": 4,
-                "comment": "Quality craftsmanship."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 1007,
-        "name": "Sneha Gupta",
-        "serviceType": "Electrician",
-        "experience": 6,
-        "rating": 4.6,
-        "pricePerHour": 28,
-        "phone": "+91-9210987654",
-        "email": "sneha.electrician@example.com",
-        "location": {
-            "city": "Pune",
-            "state": "Maharashtra",
-            "zipcode": "411001",
-            "latitude": 18.5204,
-            "longitude": 73.8567
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-15:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Switch Repair",
-            "Wiring",
-            "Inverter Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Amit Deshpande",
-                "rating": 5,
-                "comment": "Knowledgeable and efficient!"
-            },
-            {
-                "user": "Nandini Rao",
-                "rating": 4,
-                "comment": "Fixed all electrical issues."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["AC Repair", "Water Purifier Service", "Vacuum Cleaner Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Neeraj Kumar",
+        "rating": 5,
+        "comment": "Multiskilled mechanical expert!"
+      },
+      {
+        "user": "Sunita Rani",
+        "rating": 5,
+        "comment": "Fixed multiple appliances at once."
+      }
+    ]
+  },
+  {
+    "id": 4013,
+    "name": "Mohammed Khan",
+    "serviceType": "AC and Cooling",
+    "experience": 9,
+    "rating": 4.9,
+    "pricePerHour": 35,
+    "phone": "+91-9543210987",
+    "email": "mohammed.actech@example.com",
+    "location": {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipcode": "500001",
+      "latitude": 17.3850,
+      "longitude": 78.4867
     },
-    {
-        "id": 1008,
-        "name": "Vikram Singh",
-        "serviceType": "Plumber",
-        "experience": 7,
-        "rating": 4.7,
-        "pricePerHour": 26,
-        "phone": "+91-9109876543",
-        "email": "vikram.plumber@example.com",
-        "location": {
-            "city": "Bangalore",
-            "state": "Karnataka",
-            "zipcode": "560001",
-            "latitude": 12.9716,
-            "longitude": 77.5946
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Tap Repair",
-            "Bathroom Fitting",
-            "Water Tank Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rahul Sharma",
-                "rating": 5,
-                "comment": "Quick and efficient service!"
-            },
-            {
-                "user": "Pooja Reddy",
-                "rating": 4,
-                "comment": "Professional work."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-19:00",
+      "tuesday": "08:00-19:00",
+      "wednesday": "08:00-19:00",
+      "thursday": "08:00-19:00",
+      "friday": "08:00-19:00",
+      "saturday": "08:00-16:00",
+      "sunday": "10:00-14:00"
     },
-    {
-        "id": 1009,
-        "name": "Laxmi Iyer",
-        "serviceType": "House Cleaning",
-        "experience": 4,
-        "rating": 4.5,
-        "pricePerHour": 18,
-        "phone": "+91-9012345678",
-        "email": "laxmi.cleaner@example.com",
-        "location": {
-            "city": "Chennai",
-            "state": "Tamil Nadu",
-            "zipcode": "600004",
-            "latitude": 13.0837,
-            "longitude": 80.2833
-        },
-        "availability": {
-            "monday": "08:00-16:00",
-            "tuesday": "08:00-16:00",
-            "wednesday": "08:00-16:00",
-            "thursday": "08:00-16:00",
-            "friday": "08:00-16:00",
-            "saturday": "08:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Deep Cleaning",
-            "Kitchen Cleaning",
-            "Bathroom Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Geeta Krishnan",
-                "rating": 5,
-                "comment": "Thorough cleaning service!"
-            },
-            {
-                "user": "Malini Rajan",
-                "rating": 4,
-                "comment": "Prompt and efficient."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["AC Repair", "AC Service", "Gas Charging"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Abdul Rahman",
+        "rating": 5,
+        "comment": "Expert in AC repair!"
+      },
+      {
+        "user": "Laxmi Nair",
+        "rating": 5,
+        "comment": "Fixed my AC quickly."
+      }
+    ]
+  },
+  {
+    "id": 4014,
+    "name": "Abdul Rahman",
+    "serviceType": "AC and Cooling",
+    "experience": 11,
+    "rating": 4.9,
+    "pricePerHour": 38,
+    "phone": "+91-8745670123",
+    "email": "abdul.actech@example.com",
+    "location": {
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "zipcode": "226001",
+      "latitude": 26.8467,
+      "longitude": 80.9462
     },
-    {
-        "id": 1010,
-        "name": "Sanjay Malhotra",
-        "serviceType": "Painter",
-        "experience": 8,
-        "rating": 4.8,
-        "pricePerHour": 30,
-        "phone": "+91-8923456701",
-        "email": "sanjay.painter@example.com",
-        "location": {
-            "city": "Gurgaon",
-            "state": "Haryana",
-            "zipcode": "122002",
-            "latitude": 28.4698,
-            "longitude": 77.0298
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-15:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Interior Painting",
-            "Exterior Painting",
-            "Wallpaper Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rohit Kapoor",
-                "rating": 5,
-                "comment": "Neat painting work!"
-            },
-            {
-                "user": "Anita Singh",
-                "rating": 5,
-                "comment": "Attention to detail is impressive."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-19:00",
+      "tuesday": "08:00-19:00",
+      "wednesday": "08:00-19:00",
+      "thursday": "08:00-19:00",
+      "friday": "08:00-19:00",
+      "saturday": "08:00-16:00",
+      "sunday": "10:00-14:00"
     },
-    {
-        "id": 1011,
-        "name": "Meena Devi",
-        "serviceType": "Beautician",
-        "experience": 7,
-        "rating": 4.7,
-        "pricePerHour": 22,
-        "phone": "+91-8834567012",
-        "email": "meena.beauty@example.com",
-        "location": {
-            "city": "Patna",
-            "state": "Bihar",
-            "zipcode": "800001",
-            "latitude": 25.5941,
-            "longitude": 85.1376
-        },
-        "availability": {
-            "monday": "10:00-19:00",
-            "tuesday": "10:00-19:00",
-            "wednesday": "10:00-19:00",
-            "thursday": "10:00-19:00",
-            "friday": "10:00-19:00",
-            "saturday": "10:00-18:00",
-            "sunday": "10:00-14:00"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Bridal Makeup",
-            "Hair Styling",
-            "Skincare"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Sunita Kumari",
-                "rating": 5,
-                "comment": "Best makeup artist!"
-            },
-            {
-                "user": "Reena Singh",
-                "rating": 4,
-                "comment": "Loved my hairstyle."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["AC Installation", "AC Maintenance", "Cooling Solutions"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Irfan Khan",
+        "rating": 5,
+        "comment": "Expert technician!"
+      },
+      {
+        "user": "Sameer Ahmed",
+        "rating": 5,
+        "comment": "Fixed complex AC issues."
+      }
+    ]
+  },
+  {
+    "id": 4015,
+    "name": "Sameer Ahmed",
+    "serviceType": "AC and Cooling",
+    "experience": 8,
+    "rating": 4.7,
+    "pricePerHour": 33,
+    "phone": "+91-8103456789",
+    "email": "sameer.actech@example.com",
+    "location": {
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zipcode": "560004",
+      "latitude": 12.9789,
+      "longitude": 77.5916
     },
-    {
-        "id": 1012,
-        "name": "Abdul Rahman",
-        "serviceType": "AC Technician",
-        "experience": 11,
-        "rating": 4.9,
-        "pricePerHour": 38,
-        "phone": "+91-8745670123",
-        "email": "abdul.actech@example.com",
-        "location": {
-            "city": "Lucknow",
-            "state": "Uttar Pradesh",
-            "zipcode": "226001",
-            "latitude": 26.8467,
-            "longitude": 80.9462
-        },
-        "availability": {
-            "monday": "08:00-19:00",
-            "tuesday": "08:00-19:00",
-            "wednesday": "08:00-19:00",
-            "thursday": "08:00-19:00",
-            "friday": "08:00-19:00",
-            "saturday": "08:00-16:00",
-            "sunday": "10:00-14:00"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "AC Installation",
-            "AC Maintenance",
-            "Cooling Solutions"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Irfan Khan",
-                "rating": 5,
-                "comment": "Expert technician!"
-            },
-            {
-                "user": "Sameer Ahmed",
-                "rating": 5,
-                "comment": "Fixed complex AC issues."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-19:00",
+      "tuesday": "08:00-19:00",
+      "wednesday": "08:00-19:00",
+      "thursday": "08:00-19:00",
+      "friday": "08:00-19:00",
+      "saturday": "08:00-16:00",
+      "sunday": "10:00-14:00"
     },
-    {
-        "id": 1013,
-        "name": "Geeta Sharma",
-        "serviceType": "House Cleaning",
-        "experience": 5,
-        "rating": 4.6,
-        "pricePerHour": 20,
-        "phone": "+91-8656701234",
-        "email": "geeta.cleaner@example.com",
-        "location": {
-            "city": "Jaipur",
-            "state": "Rajasthan",
-            "zipcode": "302001",
-            "latitude": 26.9124,
-            "longitude": 75.7873
-        },
-        "availability": {
-            "monday": "08:00-16:00",
-            "tuesday": "08:00-16:00",
-            "wednesday": "08:00-16:00",
-            "thursday": "08:00-16:00",
-            "friday": "08:00-16:00",
-            "saturday": "08:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Post-Construction Cleaning",
-            "Office Cleaning",
-            "Carpet Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Manoj Kumar",
-                "rating": 5,
-                "comment": "Deep cleaned my entire house!"
-            },
-            {
-                "user": "Sarika Mehta",
-                "rating": 4,
-                "comment": "Very thorough and professional."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["AC Repair", "Duct Cleaning", "Thermostat Installation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Arun Kumar",
+        "rating": 5,
+        "comment": "Efficient and knowledgeable!"
+      },
+      {
+        "user": "Divya Nair",
+        "rating": 5,
+        "comment": "Fixed AC in no time."
+      }
+    ]
+  },
+  {
+    "id": 4016,
+    "name": "Rajiv Mehta",
+    "serviceType": "AC and Cooling",
+    "experience": 10,
+    "rating": 4.8,
+    "pricePerHour": 36,
+    "phone": "+91-7432109876",
+    "email": "rajiv.actech@example.com",
+    "location": {
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "zipcode": "380001",
+      "latitude": 23.0225,
+      "longitude": 72.5714
     },
-    {
-        "id": 1014,
-        "name": "Ravi Shankar",
-        "serviceType": "Electrician",
-        "experience": 9,
-        "rating": 4.8,
-        "pricePerHour": 32,
-        "phone": "+91-8567012345",
-        "email": "ravi.electrician@example.com",
-        "location": {
-            "city": "Kolkata",
-            "state": "West Bengal",
-            "zipcode": "700001",
-            "latitude": 22.5726,
-            "longitude": 88.3639
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-15:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Electrical Inspection",
-            "Panel Upgrade",
-            "Emergency Repair"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Amitava Roy",
-                "rating": 5,
-                "comment": "Solved complex electrical problems!"
-            },
-            {
-                "user": "Sushmita Das",
-                "rating": 5,
-                "comment": "Knowledgeable and professional."
-            }
-        ]
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "10:00-14:00"
     },
-    {
-        "id": 1015,
-        "name": "Pooja Reddy",
-        "serviceType": "Plumber",
-        "experience": 6,
-        "rating": 4.7,
-        "pricePerHour": 24,
-        "phone": "+91-8470123456",
-        "email": "pooja.plumber@example.com",
-        "location": {
-            "city": "Hyderabad",
-            "state": "Telangana",
-            "zipcode": "500004",
-            "latitude": 17.4065,
-            "longitude": 78.4772
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Pipe Installation",
-            "Water Heater Repair",
-            "Sewage Line Cleaning"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Kiran Kumar",
-                "rating": 5,
-                "comment": "Efficient and professional!"
-            },
-            {
-                "user": "Suman Latha",
-                "rating": 4,
-                "comment": "Fixed leakage issue permanently."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Split AC Service", "Window AC Repair", "Cooler Maintenance"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Mohan Patel",
+        "rating": 5,
+        "comment": "Comprehensive AC service!"
+      },
+      {
+        "user": "Sarika Joshi",
+        "rating": 4,
+        "comment": "Good cooling solution advice."
+      }
+    ]
+  },
+  {
+    "id": 4017,
+    "name": "Arun Singh",
+    "serviceType": "Carpentry",
+    "experience": 8,
+    "rating": 4.6,
+    "pricePerHour": 28,
+    "phone": "+91-9765432109",
+    "email": "arun.carpenter@example.com",
+    "location": {
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "zipcode": "201301",
+      "latitude": 28.5355,
+      "longitude": 77.3910
     },
-    {
-        "id": 1016,
-        "name": "Manoj Kumar",
-        "serviceType": "Carpenter",
-        "experience": 12,
-        "rating": 4.9,
-        "pricePerHour": 35,
-        "phone": "+91-8381234567",
-        "email": "manoj.carpenter@example.com",
-        "location": {
-            "city": "Ahmedabad",
-            "state": "Gujarat",
-            "zipcode": "380004",
-            "latitude": 23.0411,
-            "longitude": 72.5363
-        },
-        "availability": {
-            "monday": "08:00-17:00",
-            "tuesday": "08:00-17:00",
-            "wednesday": "08:00-17:00",
-            "thursday": "08:00-17:00",
-            "friday": "08:00-17:00",
-            "saturday": "08:00-14:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Wood Carving",
-            "Furniture Assembly",
-            "Window Repair"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Rajiv Patel",
-                "rating": 5,
-                "comment": "Master craftsman!"
-            },
-            {
-                "user": "Neeta Shah",
-                "rating": 5,
-                "comment": "Beautiful custom furniture."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-13:00",
+      "sunday": "Off"
     },
-    {
-        "id": 1017,
-        "name": "Anita Desai",
-        "serviceType": "Painter",
-        "experience": 7,
-        "rating": 4.6,
-        "pricePerHour": 26,
-        "phone": "+91-8292345678",
-        "email": "anita.painter@example.com",
-        "location": {
-            "city": "Pune",
-            "state": "Maharashtra",
-            "zipcode": "411004",
-            "latitude": 18.5314,
-            "longitude": 73.8446
-        },
-        "availability": {
-            "monday": "09:00-18:00",
-            "tuesday": "09:00-18:00",
-            "wednesday": "09:00-18:00",
-            "thursday": "09:00-18:00",
-            "friday": "09:00-18:00",
-            "saturday": "09:00-15:00",
-            "sunday": "Off"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Decorative Painting",
-            "Color Consultation",
-            "Surface Preparation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Sanjay Kulkarni",
-                "rating": 5,
-                "comment": "Creative painting solutions!"
-            },
-            {
-                "user": "Lina Fernandes",
-                "rating": 4,
-                "comment": "Good attention to detail."
-            }
-        ]
+    "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Furniture Repair", "Custom Furniture", "Door Installation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Rajesh Mehta",
+        "rating": 5,
+        "comment": "Excellent craftsmanship!"
+      },
+      {
+        "user": "Sneha Patel",
+        "rating": 4,
+        "comment": "Good work, would hire again."
+      }
+    ]
+  },
+  {
+    "id": 4018,
+    "name": "Manoj Kumar",
+    "serviceType": "Carpentry",
+    "experience": 12,
+    "rating": 4.9,
+    "pricePerHour": 35,
+    "phone": "+91-8381234567",
+    "email": "manoj.carpenter@example.com",
+    "location": {
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "zipcode": "380004",
+      "latitude": 23.0411,
+      "longitude": 72.5363
     },
-    {
-        "id": 1018,
-        "name": "Sameer Ahmed",
-        "serviceType": "AC Technician",
-        "experience": 8,
-        "rating": 4.7,
-        "pricePerHour": 33,
-        "phone": "+91-8103456789",
-        "email": "sameer.actech@example.com",
-        "location": {
-            "city": "Bangalore",
-            "state": "Karnataka",
-            "zipcode": "560004",
-            "latitude": 12.9789,
-            "longitude": 77.5916
-        },
-        "availability": {
-            "monday": "08:00-19:00",
-            "tuesday": "08:00-19:00",
-            "wednesday": "08:00-19:00",
-            "thursday": "08:00-19:00",
-            "friday": "08:00-19:00",
-            "saturday": "08:00-16:00",
-            "sunday": "10:00-14:00"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "AC Repair",
-            "Duct Cleaning",
-            "Thermostat Installation"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Arun Kumar",
-                "rating": 5,
-                "comment": "Efficient and knowledgeable!"
-            },
-            {
-                "user": "Divya Nair",
-                "rating": 5,
-                "comment": "Fixed AC in no time."
-            }
-        ]
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
     },
-    {
-        "id": 1019,
-        "name": "Neeta Kapoor",
-        "serviceType": "Beautician",
-        "experience": 9,
-        "rating": 4.8,
-        "pricePerHour": 25,
-        "phone": "+91-8014567890",
-        "email": "neeta.beauty@example.com",
-        "location": {
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "zipcode": "400004",
-            "latitude": 19.0865,
-            "longitude": 72.8685
-        },
-        "availability": {
-            "monday": "10:00-19:00",
-            "tuesday": "10:00-19:00",
-            "wednesday": "10:00-19:00",
-            "thursday": "10:00-19:00",
-            "friday": "10:00-19:00",
-            "saturday": "10:00-18:00",
-            "sunday": "10:00-14:00"
-        },
-        "profileImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
-        "servicesOffered": [
-            "Threading",
-            "Facial",
-            "Bleach",
-            "Hair Treatment"
-        ],
-        "isVerified": true,
-        "reviews": [
-            {
-                "user": "Priya Menon",
-                "rating": 5,
-                "comment": "Best beautician in Mumbai!"
-            },
-            {
-                "user": "Riya Shah",
-                "rating": 5,
-                "comment": "Skilled and friendly."
-            }
-        ]
-    }
+    "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Wood Carving", "Furniture Assembly", "Window Repair"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Rajiv Patel",
+        "rating": 5,
+        "comment": "Master craftsman!"
+      },
+      {
+        "user": "Neeta Shah",
+        "rating": 5,
+        "comment": "Beautiful custom furniture."
+      }
+    ]
+  },
+  {
+    "id": 4019,
+    "name": "Suresh Iyer",
+    "serviceType": "Carpentry",
+    "experience": 9,
+    "rating": 4.7,
+    "pricePerHour": 30,
+    "phone": "+91-7321098765",
+    "email": "suresh.carpenter@example.com",
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "zipcode": "600002",
+      "latitude": 13.0837,
+      "longitude": 80.2833
+    },
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Cabinet Making", "Bed Frame Construction", "Wood Polishing"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Krishna Kumar",
+        "rating": 5,
+        "comment": "Excellent wood finishing!"
+      },
+      {
+        "user": "Lalitha R",
+        "rating": 4,
+        "comment": "Good carpentry work."
+      }
+    ]
+  },
+  {
+    "id": 4020,
+    "name": "Rahul Sharma",
+    "serviceType": "Carpentry",
+    "experience": 7,
+    "rating": 4.6,
+    "pricePerHour": 27,
+    "phone": "+91-6543210987",
+    "email": "rahul.carpenter@example.com",
+    "location": {
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zipcode": "560002",
+      "latitude": 12.9789,
+      "longitude": 77.5916
+    },
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Shelf Installation", "Table Repair", "Door Alignment"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Anand Kumar",
+        "rating": 5,
+        "comment": "Precise carpentry work!"
+      },
+      {
+        "user": "Priya M",
+        "rating": 4,
+        "comment": "Fixed my wobbly table perfectly."
+      }
+    ]
+  },
+  {
+    "id": 4021,
+    "name": "Laxmi Iyer",
+    "serviceType": "Cleaning",
+    "experience": 4,
+    "rating": 4.5,
+    "pricePerHour": 18,
+    "phone": "+91-9012345678",
+    "email": "laxmi.cleaner@example.com",
+    "location": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "zipcode": "600004",
+      "latitude": 13.0837,
+      "longitude": 80.2833
+    },
+    "availability": {
+      "monday": "08:00-16:00",
+      "tuesday": "08:00-16:00",
+      "wednesday": "08:00-16:00",
+      "thursday": "08:00-16:00",
+      "friday": "08:00-16:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Deep Cleaning", "Kitchen Cleaning", "Bathroom Cleaning"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Geeta Krishnan",
+        "rating": 5,
+        "comment": "Thorough cleaning service!"
+      },
+      {
+        "user": "Malini Rajan",
+        "rating": 4,
+        "comment": "Prompt and efficient."
+      }
+    ]
+  },
+  {
+    "id": 4022,
+    "name": "Geeta Sharma",
+    "serviceType": "Cleaning",
+    "experience": 5,
+    "rating": 4.6,
+    "pricePerHour": 20,
+    "phone": "+91-8656701234",
+    "email": "geeta.cleaner@example.com",
+    "location": {
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "zipcode": "302001",
+      "latitude": 26.9124,
+      "longitude": 75.7873
+    },
+    "availability": {
+      "monday": "08:00-16:00",
+      "tuesday": "08:00-16:00",
+      "wednesday": "08:00-16:00",
+      "thursday": "08:00-16:00",
+      "friday": "08:00-16:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Post-Construction Cleaning", "Office Cleaning", "Carpet Cleaning"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Manoj Kumar",
+        "rating": 5,
+        "comment": "Deep cleaned my entire house!"
+      },
+      {
+        "user": "Sarika Mehta",
+        "rating": 4,
+        "comment": "Very thorough and professional."
+      }
+    ]
+  },
+  {
+    "id": 4023,
+    "name": "Anita Patel",
+    "serviceType": "Cleaning",
+    "experience": 6,
+    "rating": 4.7,
+    "pricePerHour": 22,
+    "phone": "+91-7890123456",
+    "email": "anita.cleaner@example.com",
+    "location": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipcode": "400002",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "availability": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-17:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Move-In/Move-Out Cleaning", "Window Cleaning", "Upholstery Cleaning"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Raj Mehta",
+        "rating": 5,
+        "comment": "Perfect move-out cleaning!"
+      },
+      {
+        "user": "Sunita K",
+        "rating": 5,
+        "comment": "Windows sparkle like new."
+      }
+    ]
+  },
+  {
+    "id": 4024,
+    "name": "Sunil Kumar",
+    "serviceType": "Cleaning",
+    "experience": 5,
+    "rating": 4.6,
+    "pricePerHour": 19,
+    "phone": "+91-6789012345",
+    "email": "sunil.cleaner@example.com",
+    "location": {
+      "city": "Delhi",
+      "state": "Delhi",
+      "zipcode": "110002",
+      "latitude": 28.6139,
+      "longitude": 77.2090
+    },
+    "availability": {
+      "monday": "08:00-16:00",
+      "tuesday": "08:00-16:00",
+      "wednesday": "08:00-16:00",
+      "thursday": "08:00-16:00",
+      "friday": "08:00-16:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Commercial Cleaning", "Disinfection Services", "Floor Polishing"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Amit Verma",
+        "rating": 5,
+        "comment": "Excellent office cleaning!"
+      },
+      {
+        "user": "Neha Singh",
+        "rating": 4,
+        "comment": "Thorough and efficient service."
+      }
+    ]
+  },
+  {
+    "id": 4025,
+    "name": "Priya Desai",
+    "serviceType": "Painter",
+    "experience": 6,
+    "rating": 4.5,
+    "pricePerHour": 22,
+    "phone": "+91-9654321098",
+    "email": "priya.painter@example.com",
+    "location": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipcode": "400001",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Wall Painting", "Texture Painting", "Waterproofing"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Vikram Malhotra",
+        "rating": 5,
+        "comment": "Neat and clean work!"
+      },
+      {
+        "user": "Anjali Joshi",
+        "rating": 4,
+        "comment": "Good color suggestions."
+      }
+    ]
+  },
+  {
+    "id": 4026,
+    "name": "Sanjay Malhotra",
+    "serviceType": "Painter",
+    "experience": 8,
+    "rating": 4.8,
+    "pricePerHour": 30,
+    "phone": "+91-8923456701",
+    "email": "sanjay.painter@example.com",
+    "location": {
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "zipcode": "122002",
+      "latitude": 28.4698,
+      "longitude": 77.0298
+    },
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Interior Painting", "Exterior Painting", "Wallpaper Installation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Rohit Kapoor",
+        "rating": 5,
+        "comment": "Neat painting work!"
+      },
+      {
+        "user": "Anita Singh",
+        "rating": 5,
+        "comment": "Attention to detail is impressive."
+      }
+    ]
+  },
+  {
+    "id": 4027,
+    "name": "Anita Desai",
+    "serviceType": "Painter",
+    "experience": 7,
+    "rating": 4.6,
+    "pricePerHour": 26,
+    "phone": "+91-8292345678",
+    "email": "anita.painter@example.com",
+    "location": {
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zipcode": "411004",
+      "latitude": 18.5314,
+      "longitude": 73.8446
+    },
+    "availability": {
+      "monday": "09:00-18:00",
+      "tuesday": "09:00-18:00",
+      "wednesday": "09:00-18:00",
+      "thursday": "09:00-18:00",
+      "friday": "09:00-18:00",
+      "saturday": "09:00-15:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Decorative Painting", "Color Consultation", "Surface Preparation"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Sanjay Kulkarni",
+        "rating": 5,
+        "comment": "Creative painting solutions!"
+      },
+      {
+        "user": "Lina Fernandes",
+        "rating": 4,
+        "comment": "Good attention to detail."
+      }
+    ]
+  },
+  {
+    "id": 4028,
+    "name": "Rahul Verma",
+    "serviceType": "Painter",
+    "experience": 9,
+    "rating": 4.7,
+    "pricePerHour": 32,
+    "phone": "+91-7678901234",
+    "email": "rahul.painter@example.com",
+    "location": {
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "zipcode": "560003",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "availability": {
+      "monday": "08:00-17:00",
+      "tuesday": "08:00-17:00",
+      "wednesday": "08:00-17:00",
+      "thursday": "08:00-17:00",
+      "friday": "08:00-17:00",
+      "saturday": "08:00-14:00",
+      "sunday": "Off"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Commercial Painting", "Weatherproof Coating", "Specialty Finishes"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Arvind Kumar",
+        "rating": 5,
+        "comment": "Professional painting service!"
+      },
+      {
+        "user": "Divya R",
+        "rating": 5,
+        "comment": "Office looks brand new after painting."
+      }
+    ]
+  },
+  {
+    "id": 4029,
+    "name": "Anjali Patel",
+    "serviceType": "Beautician",
+    "experience": 5,
+    "rating": 4.7,
+    "pricePerHour": 20,
+    "phone": "+91-9432109876",
+    "email": "anjali.beauty@example.com",
+    "location": {
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "zipcode": "380001",
+      "latitude": 23.0225,
+      "longitude": 72.5714
+    },
+    "availability": {
+      "monday": "10:00-19:00",
+      "tuesday": "10:00-19:00",
+      "wednesday": "10:00-19:00",
+      "thursday": "10:00-19:00",
+      "friday": "10:00-19:00",
+      "saturday": "10:00-18:00",
+      "sunday": "10:00-14:00"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Facial", "Waxing", "Manicure", "Pedicure"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Meera Shah",
+        "rating": 5,
+        "comment": "Best facial in town!"
+      },
+      {
+        "user": "Divya Mehta",
+        "rating": 4,
+        "comment": "Gentle and professional."
+      }
+    ]
+  },
+  {
+    "id": 4030,
+    "name": "Meena Devi",
+    "serviceType": "Beautician",
+    "experience": 7,
+    "rating": 4.7,
+    "pricePerHour": 22,
+    "phone": "+91-8834567012",
+    "email": "meena.beauty@example.com",
+    "location": {
+      "city": "Patna",
+      "state": "Bihar",
+      "zipcode": "800001",
+      "latitude": 25.5941,
+      "longitude": 85.1376
+    },
+    "availability": {
+      "monday": "10:00-19:00",
+      "tuesday": "10:00-19:00",
+      "wednesday": "10:00-19:00",
+      "thursday": "10:00-19:00",
+      "friday": "10:00-19:00",
+      "saturday": "10:00-18:00",
+      "sunday": "10:00-14:00"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Bridal Makeup", "Hair Styling", "Skincare"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Sunita Kumari",
+        "rating": 5,
+        "comment": "Best makeup artist!"
+      },
+      {
+        "user": "Reena Singh",
+        "rating": 4,
+        "comment": "Loved my hairstyle."
+      }
+    ]
+  },
+  {
+    "id": 4031,
+    "name": "Neeta Kapoor",
+    "serviceType": "Beautician",
+    "experience": 9,
+    "rating": 4.8,
+    "pricePerHour": 25,
+    "phone": "+91-8014567890",
+    "email": "neeta.beauty@example.com",
+    "location": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zipcode": "400004",
+      "latitude": 19.0865,
+      "longitude": 72.8685
+    },
+    "availability": {
+      "monday": "10:00-19:00",
+      "tuesday": "10:00-19:00",
+      "wednesday": "10:00-19:00",
+      "thursday": "10:00-19:00",
+      "friday": "10:00-19:00",
+      "saturday": "10:00-18:00",
+      "sunday": "10:00-14:00"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Threading", "Facial", "Bleach", "Hair Treatment"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Priya Menon",
+        "rating": 5,
+        "comment": "Best beautician in Mumbai!"
+      },
+      {
+        "user": "Riya Shah",
+        "rating": 5,
+        "comment": "Skilled and friendly."
+      }
+    ]
+  },
+  {
+    "id": 4032,
+    "name": "Pooja Singh",
+    "serviceType": "Beautician",
+    "experience": 6,
+    "rating": 4.6,
+    "pricePerHour": 21,
+    "phone": "+91-7891234560",
+    "email": "pooja.beauty@example.com",
+    "location": {
+      "city": "Delhi",
+      "state": "Delhi",
+      "zipcode": "110003",
+      "latitude": 28.6139,
+      "longitude": 77.2090
+    },
+    "availability": {
+      "monday": "10:00-19:00",
+      "tuesday": "10:00-19:00",
+      "wednesday": "10:00-19:00",
+      "thursday": "10:00-19:00",
+      "friday": "10:00-19:00",
+      "saturday": "10:00-18:00",
+      "sunday": "10:00-14:00"
+    },
+    "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    "servicesOffered": ["Makeup", "Hair Coloring", "Spa Services", "Nail Art"],
+    "isVerified": true,
+    "reviews": [
+      {
+        "user": "Ritu Sharma",
+        "rating": 5,
+        "comment": "Excellent makeup skills!"
+      },
+      {
+        "user": "Anjali Gupta",
+        "rating": 4,
+        "comment": "Loved the spa treatment."
+      }
+    ]
+  }
 ]

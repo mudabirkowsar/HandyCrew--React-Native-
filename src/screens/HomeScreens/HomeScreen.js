@@ -5,29 +5,25 @@ import SearchBar from '../../components/SearchBar';
 import BannerCarousel from '../../components/BannerCarousel';
 import ServicesList from '../../components/ServicesList';
 import WelcomeMessage from '../../components/WelcomeMessage';
+import YouMayLike from '../../components/YouMayLike';
 // Local images for banners
 const banners = [
-  { id: '1', image: require('../../../assets/banner/banner1.png') },
+  { id: '5', image: require('../../../assets/banner/banner6.png') },
+  { id: '1', image: require('../../../assets/banner/banner5.png') },
   { id: '2', image: require('../../../assets/banner/banner2.png') },
   { id: '3', image: require('../../../assets/banner/banner3.png') },
-];
-
-// Local images for services
-const services = [
-  { id: '1', name: 'Plumbing', icon: require('../../../assets/profile/plumber.png') },
-  { id: '2', name: 'Electrical', icon: require('../../../assets/profile/electrical.png') },
-  { id: '3', name: 'Mechanical', icon: require('../../../assets/profile/mechinical.png') },
-  { id: '4', name: 'Cleaning', icon: require('../../../assets/profile/cleaner.png') },
+  { id: '4', image: require('../../../assets/banner/banner4.png') },
 ];
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <SearchBar />
-      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ paddingTop: 80 }}>
+      <ScrollView style={{ flex: 1 }}>
         <WelcomeMessage />
         <BannerCarousel banners={banners} />
-        <ServicesList services={services} />
+        <YouMayLike />
+        <ServicesList />
       </ScrollView>
     </View>
   );
@@ -36,7 +32,8 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background || '#a03434',
-    marginTop: 30,
+    // backgroundColor: colors.background || '#a03434',
+    backgroundColor:"#fff",
+    // marginTop: 30,
   },
 });

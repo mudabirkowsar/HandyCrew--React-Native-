@@ -1,19 +1,27 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import colors from '../config/colors'; // make sure this path is correct
+import colors from '../config/colors';
 
 export default function WelcomeMessage() {
   return (
     <View style={styles.container}>
+      {/* Greeting */}
       <Text style={styles.greeting}>
         Hello <Text style={styles.name}>Mudabir!</Text>
       </Text>
+
+      {/* Accent line */}
+      <View style={styles.accentLine} />
+
+      {/* Tagline */}
       <Text style={styles.tagline}>
-        Welcome to HandyCrew – choose your service and get started seamlessly.
+        Welcome to <Text style={styles.highlight}>HandyCrew</Text> – find the service you need and get started quickly.
       </Text>
+
+      {/* Location */}
       <View style={styles.locationContainer}>
-        <Ionicons name="location-sharp" size={16} color={colors.gray} />
+        <Ionicons name="location-sharp" size={18} color={colors.primary} />
         <Text style={styles.location}>New Delhi, India</Text>
       </View>
     </View>
@@ -22,23 +30,36 @@ export default function WelcomeMessage() {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    marginHorizontal: 20,
+    marginTop: 20,
+    marginBottom:20,
   },
   greeting: {
-    fontSize: 28,
-    fontWeight: '500',
+    fontSize: 32,
+    fontWeight: '700',
     color: colors.textPrimary,
-    marginBottom: 8,
+    lineHeight: 38,
+    marginBottom: 6,
   },
   name: {
-    fontWeight: 'bold',
     color: colors.primary,
+  },
+  accentLine: {
+    width: 60, // length of the line
+    height: 4,
+    backgroundColor: colors.primary,
+    borderRadius: 2,
+    marginBottom: 12,
   },
   tagline: {
     fontSize: 16,
     color: colors.textSecondary,
     lineHeight: 22,
-    marginBottom: 6,
+    marginBottom: 12,
+  },
+  highlight: {
+    color: colors.primary,
+    fontWeight: '600',
   },
   locationContainer: {
     flexDirection: 'row',
@@ -47,7 +68,7 @@ const styles = StyleSheet.create({
   location: {
     fontSize: 14,
     color: colors.gray,
-    lineHeight: 20,
-    marginLeft: 5,
+    marginLeft: 6,
+    fontWeight: '500',
   },
 });

@@ -5,6 +5,8 @@ import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/authScreens/LoginScreen';
 import SignupScreen from '../screens/authScreens/SignupScreen';
 import TabNavigation from './TabNavigation';
+import ServiceProvidersAllScreen from '../screens/servicesScreeen/ServiceProvidersAllScreen';
+import ProviderDetailScreen from '../screens/servicesScreeen/ProviderDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +19,8 @@ export default function StackNavigation() {
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="SignupScreen" component={SignupScreen} />
       <Stack.Screen name="TabNavigation" component={TabNavigation} />
+      <Stack.Screen name="ServiceProvidersAllScreen" component={ServiceProvidersAllScreen} />
+      <Stack.Screen name="ProviderDetailScreen" component={ProviderDetailScreen} />
     </Stack.Navigator>
   )
 }
