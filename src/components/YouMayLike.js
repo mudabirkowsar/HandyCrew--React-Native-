@@ -3,6 +3,7 @@ import React from 'react';
 import { View, ScrollView, ImageBackground, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import colors from '../config/colors';
 import services from '../../data/services.json';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 
@@ -13,12 +14,9 @@ const getRandomServices = (allServices, count = 6) => {
 };
 
 export default function YouMayLike() {
+  const navigation = useNavigation();
   const randomServices = getRandomServices(services, 6);
   const heights = [180, 220, 200, 240, 200, 180];
-
-  const handleCardPress = (item) => {
-    console.log('Pressed:', item.name);
-  };
 
   return (
     <View style={styles.container}>
@@ -32,7 +30,7 @@ export default function YouMayLike() {
             <TouchableOpacity
               key={item.id.toString()}
               style={[styles.card, { height: heights[index] }]}
-              onPress={() => handleCardPress(item)}
+              onPress={() => navigation.navigate("ServiceProvidersAllScreen", { category: item.type })}
               activeOpacity={0.8}
             >
               <ImageBackground

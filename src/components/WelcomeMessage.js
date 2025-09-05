@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: colors.primary,
+    fontStyle:'italic'
   },
   accentLine: {
     width: 60, // length of the line

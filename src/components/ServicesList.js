@@ -3,12 +3,13 @@ import React from 'react';
 import { View, ScrollView, Image, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import colors from '../config/colors';
 import services from '../../data/services.json';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 
 
 export default function ServicesList() {
-
+    const navigation = useNavigation()
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Our Services</Text>
@@ -29,7 +30,9 @@ export default function ServicesList() {
                             <Text style={styles.details}>⭐ {item.rating} • {item.estimatedTime}</Text>
 
                             {/* Explore button */}
-                            <TouchableOpacity style={styles.button}>
+                            <TouchableOpacity style={styles.button}
+                                onPress={() => navigation.navigate("ServiceProvidersAllScreen", { category: item.type })}
+                            >
                                 <Text style={styles.buttonText}>Explore</Text>
                             </TouchableOpacity>
                         </View>
