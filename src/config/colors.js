@@ -17,7 +17,8 @@ export default {
   textPrimary: '#212121',   // Dark gray – main text
   textSecondary: '#616161', // Muted gray – secondary text
   border: '#E0E0E0',        // Light gray – subtle dividers
-  gray:"gray"
+  gray:"gray",
+  textWhite: "#fff"
 };
 
 // export default {

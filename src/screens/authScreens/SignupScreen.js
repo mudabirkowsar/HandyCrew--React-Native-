@@ -5,18 +5,26 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from '../../config/colors';
 
-export default function SignupScreen({navigation}) {
+export default function SignupScreen({ navigation }) {
   const [focusedField, setFocusedField] = useState(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   return (
     <View style={styles.container}>
+      {/* Sign Up as Provider Button */}
+      <TouchableOpacity
+        style={styles.providerBtn}
+        onPress={() => navigation.navigate('ProviderSignupScreen')}
+      >
+        <Text style={styles.providerBtnText}>Sign Up as Provider</Text>
+      </TouchableOpacity>
+
       {/* Title */}
       <Text style={styles.title}>Create Account ✨</Text>
       <Text style={styles.subtitle}>Sign up to get started</Text>
@@ -87,9 +95,7 @@ export default function SignupScreen({navigation}) {
           onFocus={() => setFocusedField('password')}
           onBlur={() => setFocusedField(null)}
         />
-        <TouchableOpacity
-          onPress={() => setPasswordVisible(!passwordVisible)}
-        >
+        <TouchableOpacity onPress={() => setPasswordVisible(!passwordVisible)}>
           <Icon
             name={passwordVisible ? 'eye-outline' : 'eye-off-outline'}
             size={20}
@@ -142,25 +148,32 @@ export default function SignupScreen({navigation}) {
         <View style={styles.divider} />
       </View>
 
-      {/* Social Signup Buttons */}
+      {/* Social Signup Buttons with Images */}
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome name="google" size={22} color="#DB4437" />
+          <Image
+            source={require('../../../assets/images/googleIcon.png')}
+            style={styles.socialImage}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome name="facebook" size={22} color="#4267B2" />
+          <Image
+            source={require('../../../assets/images/appleIcon.png')}
+            style={styles.socialImage}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome name="apple" size={22} color="#000" />
+          <Image
+            source={require('../../../assets/images/facebookIcon.png')}
+            style={styles.socialImage}
+          />
         </TouchableOpacity>
       </View>
 
       {/* Login Redirect Text */}
       <View style={styles.loginContainer}>
         <Text style={styles.loginText}>Already have an account? </Text>
-        <TouchableOpacity
-        onPress={() => navigation.navigate("LoginScreen")}
-        > 
+        <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
           <Text style={styles.loginLink}>Login</Text>
         </TouchableOpacity>
       </View>
@@ -174,6 +187,21 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     justifyContent: 'center',
     paddingHorizontal: 25,
+  },
+  providerBtn: {
+    position: 'absolute',
+    top: 50,
+    right: 25,
+    backgroundColor: colors.primary,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 12,
+    zIndex: 10,
+  },
+  providerBtnText: {
+    color: colors.textWhite,
+    fontSize: 12,
+    // fontWeight: '600',
   },
   title: {
     fontSize: 32,
@@ -261,11 +289,8 @@ const styles = StyleSheet.create({
   },
   socialButton: {
     width: 50,
-    borderWidth: 1,
-    borderColor: colors.border,
+    height: 50,
     borderRadius: 12,
-    padding: 14,
-    marginHorizontal: 8,
     backgroundColor: colors.cardBackground,
     elevation: 3,
     shadowColor: '#000',
@@ -273,6 +298,11 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  socialImage: {
+    width: 28,
+    height: 28,
+    resizeMode: 'contain',
   },
   loginContainer: {
     flexDirection: 'row',

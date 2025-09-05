@@ -57,7 +57,7 @@ export default function ServiceProvidersAllScreen({ route, navigation }) {
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.hireBtn}
-                    onPress={() => alert(`You hired ${item.name}`)}
+                    onPress={() => navigation.navigate("AddressScreen")}
                 >
                     <Text style={styles.hireBtnText}>Hire Me</Text>
                 </TouchableOpacity>
@@ -67,7 +67,7 @@ export default function ServiceProvidersAllScreen({ route, navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Providers for {category}</Text>
+            <Text style={styles.title}>Your <Text style={{ color: colors.primary }}>{category}</Text> Services</Text>
 
             <FlatList
                 data={filteredProviders}
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         color: colors.textPrimary,
         marginBottom: 16,
+        textAlign:'center',
     },
     card: {
         backgroundColor: colors.cardBackground,
@@ -107,7 +108,7 @@ const styles = StyleSheet.create({
     headerRow: {
         flexDirection: 'row',
         marginBottom: 12,
-    }, 
+    },
     avatarWrapper: {
         width: 90,
         height: 90,

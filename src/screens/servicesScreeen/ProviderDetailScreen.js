@@ -3,7 +3,7 @@ import React from 'react';
 import colors from '../../config/colors';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default function ProviderDetailScreen({ route }) {
+export default function ProviderDetailScreen({ navigation, route }) {
   const { provider } = route.params;
 
   return (
@@ -80,7 +80,7 @@ export default function ProviderDetailScreen({ route }) {
       <View style={styles.hireBtnContainer}>
         <TouchableOpacity
           style={styles.hireBtn}
-          onPress={() => alert(`You hired ${provider.name}`)}
+          onPress={() => navigation.navigate("AddressScreen")}
         >
           <Text style={styles.hireBtnText}>Hire Me</Text>
         </TouchableOpacity>

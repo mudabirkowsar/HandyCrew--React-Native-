@@ -7,6 +7,8 @@ import SignupScreen from '../screens/authScreens/SignupScreen';
 import TabNavigation from './TabNavigation';
 import ServiceProvidersAllScreen from '../screens/servicesScreeen/ServiceProvidersAllScreen';
 import ProviderDetailScreen from '../screens/servicesScreeen/ProviderDetailScreen';
+import AddressScreen from '../screens/AddressScreen';
+import HiringPage from '../screens/HiringPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,8 @@ export default function StackNavigation() {
       <Stack.Screen name="TabNavigation" component={TabNavigation} />
       <Stack.Screen name="ServiceProvidersAllScreen" component={ServiceProvidersAllScreen} />
       <Stack.Screen name="ProviderDetailScreen" component={ProviderDetailScreen} />
+      <Stack.Screen name="AddressScreen" component={AddressScreen} />
+      <Stack.Screen name="FinalHire" component={HiringPage} />
     </Stack.Navigator>
   )
 }

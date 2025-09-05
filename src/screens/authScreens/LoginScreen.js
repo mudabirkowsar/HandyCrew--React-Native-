@@ -5,16 +5,18 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from '../../config/colors';
 
-export default function LoginScreen({navigation}) {
+export default function LoginScreen({ navigation }) {
   const [focusedField, setFocusedField] = useState(null);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
     <View style={styles.container}>
+    
       {/* Title */}
       <Text style={styles.title}>Welcome Back 👋</Text>
       <Text style={styles.subtitle}>Login to continue</Text>
@@ -59,10 +61,20 @@ export default function LoginScreen({navigation}) {
           style={styles.input}
           placeholder="Password"
           placeholderTextColor={colors.textSecondary}
-          secureTextEntry
+          secureTextEntry={!passwordVisible}
           onFocus={() => setFocusedField('password')}
           onBlur={() => setFocusedField(null)}
         />
+        <TouchableOpacity
+          onPress={() => setPasswordVisible(!passwordVisible)}
+          style={styles.eyeIcon}
+        >
+          <Icon
+            name={passwordVisible ? 'eye-outline' : 'eye-off-outline'}
+            size={20}
+            color={colors.textSecondary}
+          />
+        </TouchableOpacity>
       </View>
 
       {/* Forgot Password */}
@@ -71,8 +83,9 @@ export default function LoginScreen({navigation}) {
       </TouchableOpacity>
 
       {/* Login Button */}
-      <TouchableOpacity style={styles.loginButton}
-      onPress={() => navigation.navigate("TabNavigation")}
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => navigation.navigate('TabNavigation')}
       >
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
@@ -84,25 +97,32 @@ export default function LoginScreen({navigation}) {
         <View style={styles.divider} />
       </View>
 
-      {/* Social Login Buttons */}
+      {/* Social Login Buttons with Images */}
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome name="google" size={22} color="#DB4437" />
+          <Image
+            source={require('../../../assets/googleIcon.png')}
+            style={styles.socialImage}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome name="facebook" size={22} color="#4267B2" />
+          <Image
+            source={require('../../../assets/appleIcon.png')}
+            style={styles.socialImage}
+          />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <FontAwesome name="apple" size={22} color="#000" />
+          <Image
+            source={require('../../../assets/facebookIcon.png')}
+            style={styles.socialImage}
+          />
         </TouchableOpacity>
       </View>
 
       {/* Signup Text */}
       <View style={styles.signupContainer}>
         <Text style={styles.signupText}>Don’t have an account? </Text>
-        <TouchableOpacity
-        onPress={() => navigation.navigate("SignupScreen")}
-        >
+        <TouchableOpacity onPress={() => navigation.navigate('SignupScreen')}>
           <Text style={styles.signupLink}>Sign Up</Text>
         </TouchableOpacity>
       </View>
@@ -116,7 +136,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     justifyContent: 'center',
     paddingHorizontal: 25,
-  },  
+  },
   title: {
     fontSize: 32,
     fontWeight: '800',
@@ -133,7 +153,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     letterSpacing: 0.3,
   },
-
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -164,6 +183,9 @@ const styles = StyleSheet.create({
     height: 50,
     fontSize: 16,
     color: colors.textPrimary,
+  },
+  eyeIcon: {
+    marginLeft: 10,
   },
   forgotPassword: {
     color: colors.primary,
@@ -211,11 +233,8 @@ const styles = StyleSheet.create({
   },
   socialButton: {
     width: 50,
-    borderWidth: 1,
-    borderColor: colors.border,
+    height: 50,
     borderRadius: 12,
-    padding: 14,
-    marginHorizontal: 8,
     backgroundColor: colors.cardBackground,
     elevation: 3,
     shadowColor: '#000',
@@ -223,6 +242,11 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  socialImage: {
+    width: 28,
+    height: 28,
+    resizeMode: 'contain',
   },
   signupContainer: {
     flexDirection: 'row',
