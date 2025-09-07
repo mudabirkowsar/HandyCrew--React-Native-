@@ -1,17 +1,27 @@
 import {
-    View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, FlatList, Modal
+    View,
+    Text,
+    TextInput,
+    StyleSheet,
+    TouchableOpacity,
+    ScrollView,
+    Modal,
 } from 'react-native';
 import React, { useState } from 'react';
 import colors from '../../src/config/colors';
 
 export default function AddressScreen({ navigation }) {
-    const [address, setAddresses] = useState([])
+    const [address, setAddresses] = useState([]);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
+    const [altPhone, setAltPhone] = useState('');
     const [street, setStreet] = useState('');
+    const [landmark, setLandmark] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
+    const [country, setCountry] = useState('');
     const [zipcode, setZipcode] = useState('');
+    const [addressType, setAddressType] = useState('Home');
     const [focusedInput, setFocusedInput] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -20,26 +30,48 @@ export default function AddressScreen({ navigation }) {
     };
 
     const handleSubmit = () => {
-        const newAddress = { name, phone, street, city, state, zipcode };
-        setAddresses(prev => [...prev, newAddress]);
-        navigation.navigate("FinalHire")
+        const newAddress = {
+            name,
+            phone,
+            altPhone,
+            street,
+            landmark,
+            city,
+            state,
+            country,
+            zipcode,
+            addressType,
+        };
+        setAddresses((prev) => [...prev, newAddress]);
+        navigation.navigate('FinalHire');
 
         // Reset form
         setName('');
         setPhone('');
+        setAltPhone('');
         setStreet('');
+        setLandmark('');
         setCity('');
         setState('');
+        setCountry('');
         setZipcode('');
+        setAddressType('Home');
         setModalVisible(false);
     };
 
-    const renderInput = (placeholder, value, setValue, keyboardType, inputName, extraStyle = {}) => (
+    const renderInput = (
+        placeholder,
+        value,
+        setValue,
+        keyboardType,
+        inputName,
+        extraStyle = {}
+    ) => (
         <TextInput
             style={[
                 styles.input,
                 extraStyle,
-                focusedInput === inputName && styles.inputFocused
+                focusedInput === inputName && styles.inputFocused,
             ]}
             placeholder={placeholder}
             placeholderTextColor={colors.gray}
@@ -55,21 +87,82 @@ export default function AddressScreen({ navigation }) {
         <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.title}>Add New Address</Text>
 
-            {renderInput("Full Name", name, setName, "default", "name")}
-            {renderInput("Phone Number", phone, setPhone, "phone-pad", "phone")}
-            {renderInput("Street Address", street, setStreet, "default", "street")}
+            {renderInput('Full Name', name, setName, 'default', 'name')}
+            {renderInput('Phone Number', phone, setPhone, 'phone-pad', 'phone')}
+            {renderInput(
+                'Alternate Phone (Optional)',
+                altPhone,
+                setAltPhone,
+                'phone-pad',
+                'altPhone'
+            )}
+            {renderInput('Street Address', street, setStreet, 'default', 'street')}
+            {renderInput(
+                'Landmark / Apartment / Building',
+                landmark,
+                setLandmark,
+                'default',
+                'landmark'
+            )}
 
             <View style={styles.row}>
-                {renderInput("City", city, setCity, "default", "city", styles.rowInput)}
-                {renderInput("State", state, setState, "default", "state", styles.rowInput)}
+                {renderInput('City', city, setCity, 'default', 'city', styles.rowInput)}
+                {renderInput(
+                    'State',
+                    state,
+                    setState,
+                    'default',
+                    'state',
+                    styles.rowInput
+                )}
             </View>
 
-            {renderInput("Zip Code", zipcode, setZipcode, "number-pad", "zipcode")}
+            <View style={styles.row}>
+                {renderInput(
+                    'Country',
+                    country,
+                    setCountry,
+                    'default',
+                    'country',
+                    styles.rowInput
+                )}
+                {renderInput(
+                    'Zip Code',
+                    zipcode,
+                    setZipcode,
+                    'number-pad',
+                    'zipcode',
+                    styles.rowInput
+                )}
+            </View>
+
+            {/* Address Type Pills */}
+            <Text style={styles.label}>Address Type</Text>
+            <View style={styles.typeContainer}>
+                {['Home', 'Work', 'Other'].map((type) => (
+                    <TouchableOpacity
+                        key={type}
+                        style={[
+                            styles.typePill,
+                            addressType === type && styles.typePillSelected,
+                        ]}
+                        onPress={() => setAddressType(type)}
+                    >
+                        <Text
+                            style={[
+                                styles.typeText,
+                                addressType === type && styles.typeTextSelected,
+                            ]}
+                        >
+                            {type}
+                        </Text>
+                    </TouchableOpacity>
+                ))}
+            </View>
 
             <TouchableOpacity style={styles.button} onPress={handleSave}>
                 <Text style={styles.buttonText}>Save Address</Text>
             </TouchableOpacity>
-
 
             {/* Custom Modal */}
             <Modal
@@ -81,7 +174,9 @@ export default function AddressScreen({ navigation }) {
                 <View style={styles.modalBackground}>
                     <View style={styles.modalContainer}>
                         <Text style={styles.modalTitle}>Confirm Save</Text>
-                        <Text style={styles.modalMessage}>Do you want to save this address?</Text>
+                        <Text style={styles.modalMessage}>
+                            Do you want to save this address?
+                        </Text>
                         <View style={styles.modalButtons}>
                             <TouchableOpacity
                                 style={[styles.modalButton, styles.cancelButton]}
@@ -111,23 +206,23 @@ const styles = StyleSheet.create({
         paddingTop: 50,
     },
     title: {
-        fontSize: 22,
-        fontWeight: '700',
+        fontSize: 24,
+        fontWeight: '800',
         color: colors.primary,
-        marginBottom: 20,
+        marginBottom: 25,
         textAlign: 'center',
     },
     input: {
         borderWidth: 1,
         borderColor: colors.secondary,
-        borderRadius: 10,
+        borderRadius: 12,
         padding: 14,
         marginBottom: 15,
         fontSize: 16,
         backgroundColor: '#fff',
-        shadowColor: "#000",
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
+        shadowOpacity: 0.08,
         shadowRadius: 2,
         elevation: 2,
     },
@@ -145,14 +240,45 @@ const styles = StyleSheet.create({
         flex: 1,
         marginRight: 10,
     },
+    label: {
+        fontSize: 15,
+        fontWeight: '600',
+        marginBottom: 8,
+        color: colors.textPrimary,
+    },
+    typeContainer: {
+        flexDirection: 'row',
+        marginBottom: 20,
+    },
+    typePill: {
+        borderWidth: 1,
+        borderColor: colors.secondary,
+        borderRadius: 20,
+        paddingVertical: 8,
+        paddingHorizontal: 16,
+        marginRight: 10,
+        backgroundColor: '#fff',
+    },
+    typePillSelected: {
+        backgroundColor: colors.primary,
+        borderColor: colors.primary,
+    },
+    typeText: {
+        fontSize: 14,
+        color: colors.textPrimary,
+    },
+    typeTextSelected: {
+        color: '#fff',
+        fontWeight: '700',
+    },
     button: {
         backgroundColor: colors.primary,
         paddingVertical: 16,
         borderRadius: 12,
         marginTop: 10,
-        shadowColor: "#000",
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.2,
         shadowRadius: 3.84,
         elevation: 5,
     },
@@ -161,27 +287,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '700',
         textAlign: 'center',
-    },
-    addressCard: {
-        backgroundColor: '#f9f9f9',
-        borderRadius: 10,
-        padding: 15,
-        marginBottom: 15,
-        borderWidth: 1,
-        borderColor: colors.secondary,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 2,
-    },
-    addressText: {
-        fontSize: 16,
-        marginBottom: 5,
-    },
-    label: {
-        fontWeight: '700',
-        color: colors.primary,
     },
     modalBackground: {
         flex: 1,

@@ -3,6 +3,7 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
 import { useNavigation } from '@react-navigation/native';
+import SearchBar from '../../components/SearchBar';
 
 export default function ProfileScreen() {
   const navigation = useNavigation();
