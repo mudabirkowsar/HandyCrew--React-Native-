@@ -6,7 +6,7 @@ const { width } = Dimensions.get('window');
 const SLIDE_WIDTH = width - 40; // Slider width minus padding
 const THUMB_SIZE = 60; // Circle size
 
-export default function HiringPage({navigation}) {
+export default function HiringPage({ navigation }) {
   const [hired, setHired] = useState(false);
   const [confirmModalVisible, setConfirmModalVisible] = useState(false);
   const [thankModalVisible, setThankModalVisible] = useState(false);
@@ -59,7 +59,7 @@ export default function HiringPage({navigation}) {
 
   const closeThankModal = () => {
     setThankModalVisible(false);
-    navigation.navigate("TabNavigation")
+    navigation.replace("TabNavigation")
   };
 
   return (
@@ -119,7 +119,7 @@ export default function HiringPage({navigation}) {
           <View style={styles.modalContainer}>
             <Text style={styles.modalTitle}>Thank You!</Text>
             <Text style={styles.modalText}>Thanks for hiring me 🎉</Text>
-            <TouchableOpacity style={{backgroundColor: "#009688", paddingHorizontal:20, paddingVertical:15, borderRadius:10}} onPress={closeThankModal}>
+            <TouchableOpacity style={{ backgroundColor: "#009688", paddingHorizontal: 20, paddingVertical: 15, borderRadius: 10 }} onPress={closeThankModal}>
               <Text style={styles.buttonText}>Close</Text>
             </TouchableOpacity>
           </View>
