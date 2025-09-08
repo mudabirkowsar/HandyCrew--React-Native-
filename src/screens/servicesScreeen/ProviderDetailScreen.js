@@ -5,6 +5,8 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
+  Share,
+  Linking,
 } from 'react-native';
 import React, { useState } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
@@ -15,6 +17,43 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 export default function ProviderDetailScreen({ navigation, route }) {
   const { provider } = route.params;
   const [showAllReviews, setShowAllReviews] = useState(false);
+
+  // 📞 Call
+  const handleCall = () => {
+    Linking.openURL(`tel:${provider.phone}`);
+  };
+
+  // 💬 Chat (WhatsApp fallback, else SMS)
+  const handleChat = () => {
+    const whatsappUrl = `whatsapp://send?phone=${provider.phone}`;
+    Linking.canOpenURL(whatsappUrl)
+      .then(supported => {
+        if (supported) {
+          Linking.openURL(whatsappUrl);
+        } else {
+          Linking.openURL(`sms:${provider.phone}`);
+        }
+      })
+      .catch(err => console.log(err));
+  };
+
+  // 📤 Share
+  const handleShare = async () => {
+    try {
+      await Share.share({
+        message: `Check out ${provider.name}, a great ${provider.serviceType}. Contact: ${provider.phone}`,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // 📍 Route
+  const handleRoute = () => {
+    const { latitude, longitude } = provider.location;
+    const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+    Linking.openURL(mapsUrl);
+  };
 
   return (
     <View style={styles.container}>
@@ -47,6 +86,29 @@ export default function ProviderDetailScreen({ navigation, route }) {
             <Ionicons name="cash" size={16} color={colors.secondary} />
             <Text style={styles.badgeText}>₹{provider.pricePerHour}/hr</Text>
           </View>
+        </View>
+
+        {/* Action Buttons */}
+        <View style={styles.actionRow}>
+          <TouchableOpacity style={styles.actionBtn} onPress={handleCall}>
+            <Ionicons name="call" size={22} color="#fff" />
+            <Text style={styles.actionText}>Call</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.actionBtn} onPress={handleChat}>
+            <Ionicons name="chatbubble-ellipses" size={22} color="#fff" />
+            <Text style={styles.actionText}>Chat</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.actionBtn} onPress={handleShare}>
+            <Ionicons name="share-social" size={22} color="#fff" />
+            <Text style={styles.actionText}>Share</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.actionBtn} onPress={handleRoute}>
+            <Ionicons name="navigate" size={22} color="#fff" />
+            <Text style={styles.actionText}>Route</Text>
+          </TouchableOpacity>
         </View>
       </LinearGradient>
 
@@ -85,7 +147,11 @@ export default function ProviderDetailScreen({ navigation, route }) {
           <View style={styles.servicesRow}>
             {provider.servicesOffered.map((service, index) => (
               <View key={index} style={styles.serviceTag}>
-                <MaterialCommunityIcons name="wrench" size={14} color={colors.secondary} />
+                <MaterialCommunityIcons
+                  name="wrench"
+                  size={14}
+                  color={colors.secondary}
+                />
                 <Text style={styles.serviceText}>{service}</Text>
               </View>
             ))}
@@ -98,7 +164,12 @@ export default function ProviderDetailScreen({ navigation, route }) {
           {(showAllReviews ? provider.reviews : provider.reviews.slice(0, 1)).map(
             (review, index) => (
               <View key={index} style={styles.reviewCard}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}
+                >
                   <Text style={styles.reviewUser}>{review.user}</Text>
                   <Text style={styles.reviewRating}>⭐ {review.rating}</Text>
                 </View>
@@ -145,7 +216,12 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#fff',
   },
-  name: { fontSize: 22, fontWeight: '700', color: '#fff', textAlign: 'center' },
+  name: {
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#fff',
+    textAlign: 'center',
+  },
   detail: { fontSize: 14, color: '#f0f0f0', marginBottom: 8 },
   infoBadges: { flexDirection: 'row', marginTop: 8 },
   badge: {
@@ -160,8 +236,31 @@ const styles = StyleSheet.create({
     borderColor: colors.secondary,
   },
   badgeText: { fontSize: 13, marginLeft: 4, color: colors.textPrimary },
+
+  /* Action Buttons Row */
+  actionRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 16,
+    width: '90%',
+  },
+  actionBtn: {
+    alignItems: 'center',
+  },
+  actionText: {
+    marginTop: 4,
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+
   section: { marginBottom: 20 },
-  sectionTitle: { fontSize: 16, fontWeight: '700', color: colors.textPrimary, marginBottom: 8 },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: colors.textPrimary,
+    marginBottom: 8,
+  },
   text: { fontSize: 14, color: colors.textSecondary, marginBottom: 4 },
   infoRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 6 },
   servicesRow: { flexDirection: 'row', flexWrap: 'wrap' },
@@ -177,8 +276,18 @@ const styles = StyleSheet.create({
     borderColor: colors.secondary,
   },
   serviceText: { fontSize: 12, marginLeft: 4, color: colors.secondary },
-  mapPreview: { width: '100%', height: 180, borderRadius: 12, marginTop: 10 },
-  reviewCard: { backgroundColor: colors.cardBackground, padding: 12, borderRadius: 12, marginBottom: 10 },
+  mapPreview: {
+    width: '100%',
+    height: 180,
+    borderRadius: 12,
+    marginTop: 10,
+  },
+  reviewCard: {
+    backgroundColor: colors.cardBackground,
+    padding: 12,
+    borderRadius: 12,
+    marginBottom: 10,
+  },
   reviewUser: { fontWeight: '600', color: colors.textPrimary },
   reviewRating: { fontSize: 12, color: colors.secondary },
   reviewComment: { fontSize: 13, marginTop: 4, color: colors.textSecondary },
