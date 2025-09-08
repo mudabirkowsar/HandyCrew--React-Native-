@@ -25,7 +25,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1585747861815-0468f061d4f4?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Leak Repair", "Pipe Replacement", "Drain Cleaning"],
+    "servicesOffered": [
+      "Leak Repair",
+      "Pipe Replacement",
+      "Drain Cleaning"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -66,7 +70,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Tap Repair", "Bathroom Fitting", "Water Tank Cleaning"],
+    "servicesOffered": [
+      "Tap Repair",
+      "Bathroom Fitting",
+      "Water Tank Cleaning"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -107,7 +115,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Pipe Installation", "Water Heater Repair", "Sewage Line Cleaning"],
+    "servicesOffered": [
+      "Pipe Installation",
+      "Water Heater Repair",
+      "Sewage Line Cleaning"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -148,7 +160,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Bathroom Renovation", "Water Pump Installation", "Pipeline Repair"],
+    "servicesOffered": [
+      "Bathroom Renovation",
+      "Water Pump Installation",
+      "Pipeline Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -189,7 +205,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Wiring", "Light Installation", "Fan & AC Repair"],
+    "servicesOffered": [
+      "Wiring",
+      "Light Installation",
+      "Fan & AC Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -230,7 +250,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Switch Repair", "Wiring", "Inverter Installation"],
+    "servicesOffered": [
+      "Switch Repair",
+      "Wiring",
+      "Inverter Installation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -271,7 +295,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Electrical Inspection", "Panel Upgrade", "Emergency Repair"],
+    "servicesOffered": [
+      "Electrical Inspection",
+      "Panel Upgrade",
+      "Emergency Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -312,7 +340,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Industrial Wiring", "Generator Repair", "Solar Installation"],
+    "servicesOffered": [
+      "Industrial Wiring",
+      "Generator Repair",
+      "Solar Installation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -353,7 +385,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Appliance Repair", "Machine Maintenance", "Equipment Installation"],
+    "servicesOffered": [
+      "Appliance Repair",
+      "Machine Maintenance",
+      "Equipment Installation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -394,7 +430,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Washing Machine Repair", "Refrigerator Service", "Microwave Repair"],
+    "servicesOffered": [
+      "Washing Machine Repair",
+      "Refrigerator Service",
+      "Microwave Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -435,7 +475,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Kitchen Appliance Repair", "Mixer Service", "Grinder Repair"],
+    "servicesOffered": [
+      "Kitchen Appliance Repair",
+      "Mixer Service",
+      "Grinder Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -476,7 +520,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["AC Repair", "Water Purifier Service", "Vacuum Cleaner Repair"],
+    "servicesOffered": [
+      "AC Repair",
+      "Water Purifier Service",
+      "Vacuum Cleaner Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -517,7 +565,11 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["AC Repair", "AC Service", "Gas Charging"],
+    "servicesOffered": [
+      "AC Repair",
+      "AC Service",
+      "Gas Charging"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -558,7 +610,11 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["AC Installation", "AC Maintenance", "Cooling Solutions"],
+    "servicesOffered": [
+      "AC Installation",
+      "AC Maintenance",
+      "Cooling Solutions"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -599,7 +655,11 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["AC Repair", "Duct Cleaning", "Thermostat Installation"],
+    "servicesOffered": [
+      "AC Repair",
+      "Duct Cleaning",
+      "Thermostat Installation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -640,7 +700,11 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Split AC Service", "Window AC Repair", "Cooler Maintenance"],
+    "servicesOffered": [
+      "Split AC Service",
+      "Window AC Repair",
+      "Cooler Maintenance"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -681,7 +745,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Furniture Repair", "Custom Furniture", "Door Installation"],
+    "servicesOffered": [
+      "Furniture Repair",
+      "Custom Furniture",
+      "Door Installation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -722,7 +790,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Wood Carving", "Furniture Assembly", "Window Repair"],
+    "servicesOffered": [
+      "Wood Carving",
+      "Furniture Assembly",
+      "Window Repair"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -763,7 +835,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Cabinet Making", "Bed Frame Construction", "Wood Polishing"],
+    "servicesOffered": [
+      "Cabinet Making",
+      "Bed Frame Construction",
+      "Wood Polishing"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -804,7 +880,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Shelf Installation", "Table Repair", "Door Alignment"],
+    "servicesOffered": [
+      "Shelf Installation",
+      "Table Repair",
+      "Door Alignment"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -845,7 +925,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Deep Cleaning", "Kitchen Cleaning", "Bathroom Cleaning"],
+    "servicesOffered": [
+      "Deep Cleaning",
+      "Kitchen Cleaning",
+      "Bathroom Cleaning"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -886,7 +970,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Post-Construction Cleaning", "Office Cleaning", "Carpet Cleaning"],
+    "servicesOffered": [
+      "Post-Construction Cleaning",
+      "Office Cleaning",
+      "Carpet Cleaning"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -927,7 +1015,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Move-In/Move-Out Cleaning", "Window Cleaning", "Upholstery Cleaning"],
+    "servicesOffered": [
+      "Move-In/Move-Out Cleaning",
+      "Window Cleaning",
+      "Upholstery Cleaning"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -968,7 +1060,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Commercial Cleaning", "Disinfection Services", "Floor Polishing"],
+    "servicesOffered": [
+      "Commercial Cleaning",
+      "Disinfection Services",
+      "Floor Polishing"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1009,7 +1105,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Wall Painting", "Texture Painting", "Waterproofing"],
+    "servicesOffered": [
+      "Wall Painting",
+      "Texture Painting",
+      "Waterproofing"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1050,7 +1150,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Interior Painting", "Exterior Painting", "Wallpaper Installation"],
+    "servicesOffered": [
+      "Interior Painting",
+      "Exterior Painting",
+      "Wallpaper Installation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1091,7 +1195,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Decorative Painting", "Color Consultation", "Surface Preparation"],
+    "servicesOffered": [
+      "Decorative Painting",
+      "Color Consultation",
+      "Surface Preparation"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1132,7 +1240,11 @@
       "sunday": "Off"
     },
     "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Commercial Painting", "Weatherproof Coating", "Specialty Finishes"],
+    "servicesOffered": [
+      "Commercial Painting",
+      "Weatherproof Coating",
+      "Specialty Finishes"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1173,7 +1285,12 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Facial", "Waxing", "Manicure", "Pedicure"],
+    "servicesOffered": [
+      "Facial",
+      "Waxing",
+      "Manicure",
+      "Pedicure"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1214,7 +1331,11 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Bridal Makeup", "Hair Styling", "Skincare"],
+    "servicesOffered": [
+      "Bridal Makeup",
+      "Hair Styling",
+      "Skincare"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1255,7 +1376,12 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Threading", "Facial", "Bleach", "Hair Treatment"],
+    "servicesOffered": [
+      "Threading",
+      "Facial",
+      "Bleach",
+      "Hair Treatment"
+    ],
     "isVerified": true,
     "reviews": [
       {
@@ -1296,7 +1422,12 @@
       "sunday": "10:00-14:00"
     },
     "profileImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
-    "servicesOffered": ["Makeup", "Hair Coloring", "Spa Services", "Nail Art"],
+    "servicesOffered": [
+      "Makeup",
+      "Hair Coloring",
+      "Spa Services",
+      "Nail Art"
+    ],
     "isVerified": true,
     "reviews": [
       {

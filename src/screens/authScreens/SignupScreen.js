@@ -15,12 +15,16 @@ export default function SignupScreen({ navigation }) {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
+  const handleSignup = () => {
+    navigation.navigate("")
+  }
+
   return (
     <View style={styles.container}>
       {/* Sign Up as Provider Button */}
       <TouchableOpacity
         style={styles.providerBtn}
-        onPress={() => navigation.navigate('ProviderSignupScreen')}
+        onPress={() => navigation.navigate('SignupProvider')}
       >
         <Text style={styles.providerBtnText}>Sign Up as Provider</Text>
       </TouchableOpacity>
@@ -137,7 +141,9 @@ export default function SignupScreen({ navigation }) {
       </View>
 
       {/* Signup Button */}
-      <TouchableOpacity style={styles.signupButton}>
+      <TouchableOpacity style={styles.signupButton}
+        onPress={handleSignup}
+      >
         <Text style={styles.signupButtonText}>Sign Up</Text>
       </TouchableOpacity>
 
