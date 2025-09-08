@@ -12,6 +12,7 @@ import HiringPage from '../screens/HiringPage';
 import SignupScreenProvider from '../providersScreens/SignupScreenProvider';
 import FormDetail from '../providersScreens/formDetailScreens/FormDetail';
 import TabNavigationProvider from '../providersScreens/formDetailScreens/navigationProvider/TabNavigationProvider';
+import UserChatScreen from '../providersScreens/screens/chatScreen/UserChatScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,7 @@ export default function StackNavigation() {
       <Stack.Screen name="SignupProvider" component={SignupScreenProvider} />
       <Stack.Screen name="FormDetail" component={FormDetail} />
       <Stack.Screen name="TabNavProvider" component={TabNavigationProvider} />
+      <Stack.Screen name="UserChatScreen" component={UserChatScreen} />
     </Stack.Navigator>
   )
 }

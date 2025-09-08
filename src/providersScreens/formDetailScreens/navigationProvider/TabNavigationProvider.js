@@ -8,6 +8,7 @@ import HomeScreenProvider from '../../screens/homeScreens/HomeScreenProvider';
 import ServiceScreenProvider from '../../screens/servicesScreen/ServiceScreenProvider';
 import NotificationScreenProvider from '../../screens/notificationScreen/NotificationScreenProvider';
 import ChatScreenProvider from '../../screens/chatScreen/ChatScreenProvider';
+import RequestScreenProvider from '../../screens/requestsScreen/RequestScreenProvider';
 
 const Tab = createBottomTabNavigator();
 
@@ -88,7 +89,7 @@ export default function TabNavigationProvider() {
 
             <Tab.Screen
                 name="Requests"
-                component={ServiceScreenProvider}
+                component={RequestScreenProvider}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <MaterialCommunityIcons
