@@ -1,12 +1,27 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
-import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Modal } from 'react-native';
+import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
 import { useNavigation } from '@react-navigation/native';
-import SearchBar from '../../components/SearchBar';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../../firebase/firebaseConfig';
+import useAuth from '../../../hooks/useAuth';
 
 export default function ProfileScreen() {
   const navigation = useNavigation();
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const {username, userEmail} = useAuth()
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setModalVisible(false);
+      navigation.replace('LoginScreen'); // replace so user can't go back
+    } catch (error) {
+      console.log('Logout error:', error);
+    }
+  };
 
   return (
     <ScrollView style={styles.container}>
@@ -19,48 +34,56 @@ export default function ProfileScreen() {
           style={styles.profileImage}
         />
         <View style={styles.headerInfo}>
-          <Text style={styles.name}>John Doe</Text>
-          <Text style={styles.email}>johndoe@example.com</Text>
+          <Text style={styles.name}>{username}</Text>
+          <Text style={styles.email}>{userEmail}</Text>
         </View>
       </View>
 
       {/* Options Section */}
       <View style={styles.section}>
-        <OptionRow
-          icon="person-circle-outline"
-          label="Edit Profile"
-        // onPress={() => navigation.navigate('EditProfileScreen')}
-        />
-        <OptionRow
-          icon="lock-closed-outline"
-          label="Change Password"
-        // onPress={() => navigation.navigate('ChangePasswordScreen')}
-        />
-        <OptionRow
-          icon="information-circle-outline"
-          label="About Application"
-        // onPress={() => navigation.navigate('AboutScreen')}
-        />
-        <OptionRow
-          icon="mail-outline"
-          label="Contact Developers"
-        // onPress={() => navigation.navigate('ContactScreen')}
-        />
-        <OptionRow
-          icon="help-circle-outline"
-          label="Help & Support"
-        // onPress={() => navigation.navigate('HelpScreen')}
-        />
+        <OptionRow icon="person-circle-outline" label="Edit Profile" />
+        <OptionRow icon="lock-closed-outline" label="Change Password" />
+        <OptionRow icon="information-circle-outline" label="About Application" />
+        <OptionRow icon="mail-outline" label="Contact Developers" />
+        <OptionRow icon="help-circle-outline" label="Help & Support" />
         <OptionRow
           icon="log-out-outline"
           label="Logout"
           isDestructive
-          onPress={() => {
-            // logout logic here
-            console.log('User logged out');
-          }}
+          onPress={() => setModalVisible(true)}
         />
       </View>
+
+      {/* Logout Confirmation Modal */}
+      <Modal
+        transparent={true}
+        animationType="fade"
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContainer}>
+            <Text style={styles.modalTitle}>Confirm Logout</Text>
+            <Text style={styles.modalMessage}>
+              Are you sure you want to log out?
+            </Text>
+            <View style={styles.modalActions}>
+              <TouchableOpacity
+                style={[styles.modalButton, styles.cancelButton]}
+                onPress={() => setModalVisible(false)}
+              >
+                <Text style={styles.cancelText}>Cancel</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.modalButton, styles.logoutButton]}
+                onPress={handleLogout}
+              >
+                <Text style={styles.logoutText}>Logout</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </ScrollView>
   );
 }
@@ -146,5 +169,53 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginLeft: 10,
     fontWeight: '500',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalContainer: {
+    width: '80%',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 20,
+    elevation: 5,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 10,
+    color: colors.textPrimary,
+  },
+  modalMessage: {
+    fontSize: 14,
+    color: colors.textSecondary,
+    marginBottom: 20,
+  },
+  modalActions: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
+  modalButton: {
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    marginLeft: 10,
+  },
+  cancelButton: {
+    backgroundColor: '#e0e0e0',
+  },
+  logoutButton: {
+    backgroundColor: '#f44336',
+  },
+  cancelText: {
+    color: '#333',
+    fontWeight: '600',
+  },
+  logoutText: {
+    color: '#fff',
+    fontWeight: '600',
   },
 });

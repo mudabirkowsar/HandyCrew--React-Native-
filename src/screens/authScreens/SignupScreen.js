@@ -6,18 +6,77 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
+  ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { auth } from '../../../firebase/firebaseConfig';
 
 export default function SignupScreen({ navigation }) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
   const [focusedField, setFocusedField] = useState(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
-  const handleSignup = () => {
-    navigation.navigate("")
-  }
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // ✅ new state for loader
+
+  const validate = () => {
+    let valid = true;
+    let newErrors = {};
+
+    if (!name.trim()) {
+      newErrors.name = 'Full name is required';
+      valid = false;
+    }
+
+    if (!email.trim()) {
+      newErrors.email = 'Email is required';
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = 'Enter a valid email';
+      valid = false;
+    }
+
+    if (!password) {
+      newErrors.password = 'Password is required';
+      valid = false;
+    } else if (password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+      valid = false;
+    }
+
+    if (!confirmPassword) {
+      newErrors.confirmPassword = 'Please confirm your password';
+      valid = false;
+    } else if (password !== confirmPassword) {
+      newErrors.confirmPassword = 'Passwords do not match';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSignup = async () => {
+    if (validate()) {
+      try {
+        setLoading(true); // ✅ start loading
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        await updateProfile(userCredential.user, { displayName: name });
+        navigation.replace("TabNavigation");
+      } catch (error) {
+        console.log("Error", error.message);
+      } finally {
+        setLoading(false); // ✅ stop loading no matter success or fail
+      }
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -50,10 +109,13 @@ export default function SignupScreen({ navigation }) {
           style={styles.input}
           placeholder="Full Name"
           placeholderTextColor={colors.textSecondary}
+          value={name}
+          onChangeText={setName}
           onFocus={() => setFocusedField('name')}
           onBlur={() => setFocusedField(null)}
         />
       </View>
+      {errors.name && <Text style={styles.errorText}>{errors.name}</Text>}
 
       {/* Email Input */}
       <View
@@ -73,10 +135,14 @@ export default function SignupScreen({ navigation }) {
           placeholder="Email"
           placeholderTextColor={colors.textSecondary}
           keyboardType="email-address"
+          autoCapitalize="none"
+          value={email}
+          onChangeText={setEmail}
           onFocus={() => setFocusedField('email')}
           onBlur={() => setFocusedField(null)}
         />
       </View>
+      {errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
 
       {/* Password Input */}
       <View
@@ -96,6 +162,8 @@ export default function SignupScreen({ navigation }) {
           placeholder="Password"
           placeholderTextColor={colors.textSecondary}
           secureTextEntry={!passwordVisible}
+          value={password}
+          onChangeText={setPassword}
           onFocus={() => setFocusedField('password')}
           onBlur={() => setFocusedField(null)}
         />
@@ -107,6 +175,7 @@ export default function SignupScreen({ navigation }) {
           />
         </TouchableOpacity>
       </View>
+      {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
 
       {/* Confirm Password Input */}
       <View
@@ -126,6 +195,8 @@ export default function SignupScreen({ navigation }) {
           placeholder="Confirm Password"
           placeholderTextColor={colors.textSecondary}
           secureTextEntry={!confirmPasswordVisible}
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
           onFocus={() => setFocusedField('confirmPassword')}
           onBlur={() => setFocusedField(null)}
         />
@@ -139,12 +210,21 @@ export default function SignupScreen({ navigation }) {
           />
         </TouchableOpacity>
       </View>
+      {errors.confirmPassword && (
+        <Text style={styles.errorText}>{errors.confirmPassword}</Text>
+      )}
 
       {/* Signup Button */}
-      <TouchableOpacity style={styles.signupButton}
+      <TouchableOpacity
+        style={styles.signupButton}
         onPress={handleSignup}
+        disabled={loading} // ✅ prevent multiple taps
       >
-        <Text style={styles.signupButtonText}>Sign Up</Text>
+        {loading ? (
+          <ActivityIndicator size="small" color="#fff" />
+        ) : (
+          <Text style={styles.signupButtonText}>Sign Up</Text>
+        )}
       </TouchableOpacity>
 
       {/* Or Divider */}
@@ -154,7 +234,7 @@ export default function SignupScreen({ navigation }) {
         <View style={styles.divider} />
       </View>
 
-      {/* Social Signup Buttons with Images */}
+      {/* Social Signup Buttons */}
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
           <Image
@@ -176,7 +256,7 @@ export default function SignupScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Login Redirect Text */}
+      {/* Login Redirect */}
       <View style={styles.loginContainer}>
         <Text style={styles.loginText}>Already have an account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
@@ -323,5 +403,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: colors.primary,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 12,
+    marginTop: -12,
+    marginBottom: 12,
+    marginLeft: 5,
   },
 });

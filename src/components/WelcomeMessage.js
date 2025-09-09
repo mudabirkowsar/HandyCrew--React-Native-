@@ -2,13 +2,17 @@ import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import colors from '../config/colors';
+import useAuth from '../../hooks/useAuth';
 
 export default function WelcomeMessage() {
+
+  const {username} = useAuth()
+
   return (
     <View style={styles.container}>
       {/* Greeting */}
       <Text style={styles.greeting}>
-        Hello <Text style={styles.name}>Mudabir!</Text>
+        Hello <Text style={styles.name}>{username}!</Text>
       </Text>
 
       {/* Accent line */}

@@ -6,17 +6,63 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
+  ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../../firebase/firebaseConfig';
 
 export default function LoginScreen({ navigation }) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const [focusedField, setFocusedField] = useState(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // ✅ new loading state
+
+  const validate = () => {
+    let valid = true;
+    let newErrors = {};
+
+    if (!email.trim()) {
+      newErrors.email = 'Email is required';
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = 'Enter a valid email';
+      valid = false;
+    }
+
+    if (!password) {
+      newErrors.password = 'Password is required';
+      valid = false;
+    } else if (password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleLogin = async () => {
+    if (validate()) {
+      try {
+        setLoading(true); // ✅ start loading
+        await signInWithEmailAndPassword(auth, email, password);
+        navigation.replace('TabNavigation');
+      } catch (error) {
+        console.log("Error", error.message);
+        setErrors({ general: 'Invalid credentials, please try again' });
+      } finally {
+        setLoading(false); // ✅ stop loading
+      }
+    }
+  };
 
   return (
     <View style={styles.container}>
-    
       {/* Title */}
       <Text style={styles.title}>Welcome Back 👋</Text>
       <Text style={styles.subtitle}>Login to continue</Text>
@@ -39,10 +85,14 @@ export default function LoginScreen({ navigation }) {
           placeholder="Email"
           placeholderTextColor={colors.textSecondary}
           keyboardType="email-address"
+          autoCapitalize="none"
+          value={email}
+          onChangeText={setEmail}
           onFocus={() => setFocusedField('email')}
           onBlur={() => setFocusedField(null)}
         />
       </View>
+      {errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
 
       {/* Password Input */}
       <View
@@ -62,6 +112,8 @@ export default function LoginScreen({ navigation }) {
           placeholder="Password"
           placeholderTextColor={colors.textSecondary}
           secureTextEntry={!passwordVisible}
+          value={password}
+          onChangeText={setPassword}
           onFocus={() => setFocusedField('password')}
           onBlur={() => setFocusedField(null)}
         />
@@ -76,6 +128,7 @@ export default function LoginScreen({ navigation }) {
           />
         </TouchableOpacity>
       </View>
+      {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
 
       {/* Forgot Password */}
       <TouchableOpacity>
@@ -84,10 +137,15 @@ export default function LoginScreen({ navigation }) {
 
       {/* Login Button */}
       <TouchableOpacity
-        style={styles.loginButton}
-        onPress={() => navigation.navigate('TabNavigation')}
+        style={[styles.loginButton, loading && { opacity: 0.8 }]}
+        onPress={handleLogin}
+        disabled={loading} // ✅ disable while loading
       >
-        <Text style={styles.loginButtonText}>Login</Text>
+        {loading ? (
+          <ActivityIndicator size="small" color="#fff" /> // ✅ spinner
+        ) : (
+          <Text style={styles.loginButtonText}>Login</Text>
+        )}
       </TouchableOpacity>
 
       {/* Or Divider */}
@@ -97,7 +155,7 @@ export default function LoginScreen({ navigation }) {
         <View style={styles.divider} />
       </View>
 
-      {/* Social Login Buttons with Images */}
+      {/* Social Login Buttons */}
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
           <Image
@@ -261,5 +319,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: colors.primary,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 12,
+    marginTop: -12,
+    marginBottom: 12,
+    marginLeft: 5,
   },
 });

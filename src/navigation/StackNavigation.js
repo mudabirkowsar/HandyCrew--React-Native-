@@ -13,27 +13,46 @@ import SignupScreenProvider from '../providersScreens/SignupScreenProvider';
 import FormDetail from '../providersScreens/formDetailScreens/FormDetail';
 import TabNavigationProvider from '../providersScreens/formDetailScreens/navigationProvider/TabNavigationProvider';
 import UserChatScreen from '../providersScreens/screens/chatScreen/UserChatScreen';
+import useAuth from '../../hooks/useAuth';
 
 const Stack = createNativeStackNavigator();
 
 export default function StackNavigation() {
-  return (
-    <Stack.Navigator screenOptions={{
-      headerShown: false
-    }}>
-      <Stack.Screen name="SplashScreen" component={SplashScreen} />
-      <Stack.Screen name="LoginScreen" component={LoginScreen} />
-      <Stack.Screen name="SignupScreen" component={SignupScreen} />
-      <Stack.Screen name="TabNavigation" component={TabNavigation} />
-      <Stack.Screen name="ServiceProvidersAllScreen" component={ServiceProvidersAllScreen} />
-      <Stack.Screen name="ProviderDetailScreen" component={ProviderDetailScreen} />
-      <Stack.Screen name="AddressScreen" component={AddressScreen} />
-      <Stack.Screen name="FinalHire" component={HiringPage} />
 
-      <Stack.Screen name="SignupProvider" component={SignupScreenProvider} />
-      <Stack.Screen name="FormDetail" component={FormDetail} />
-      <Stack.Screen name="TabNavProvider" component={TabNavigationProvider} />
-      <Stack.Screen name="UserChatScreen" component={UserChatScreen} />
-    </Stack.Navigator>
-  )
+  const { user } = useAuth();
+
+  if (!user) {
+    return (
+      <Stack.Navigator
+        initialRouteName='SplashScreen'
+        screenOptions={{
+          headerShown: false
+        }}>
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="SignupScreen" component={SignupScreen} />
+        <Stack.Screen name="SignupProvider" component={SignupScreenProvider} />
+      </Stack.Navigator>
+    )
+  }
+  else {
+    return (
+      <Stack.Navigator
+        initialRouteName='TabNavigation'
+        screenOptions={{
+          headerShown: false
+        }}>
+        <Stack.Screen name="TabNavigation" component={TabNavigation} />
+        <Stack.Screen name="ServiceProvidersAllScreen" component={ServiceProvidersAllScreen} />
+        <Stack.Screen name="ProviderDetailScreen" component={ProviderDetailScreen} />
+        <Stack.Screen name="AddressScreen" component={AddressScreen} />
+        <Stack.Screen name="FinalHire" component={HiringPage} />
+
+        <Stack.Screen name="FormDetail" component={FormDetail} />
+        <Stack.Screen name="TabNavProvider" component={TabNavigationProvider} />
+        <Stack.Screen name="UserChatScreen" component={UserChatScreen} />
+      </Stack.Navigator>
+    )
+  }
+
 }

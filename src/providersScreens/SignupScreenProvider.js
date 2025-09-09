@@ -6,6 +6,7 @@ import {
     StyleSheet,
     TouchableOpacity,
     Image,
+    ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../config/colors';
@@ -14,10 +15,62 @@ export default function SignupScreenProvider({ navigation }) {
     const [focusedField, setFocusedField] = useState(null);
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    const handleProviderSignup = () => {
-        navigation.navigate("FormDetail")
-    }
+    // Form state
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+    // Error state
+    const [errors, setErrors] = useState({});
+
+    // Validation
+    const validate = () => {
+        let newErrors = {};
+
+        if (!name.trim()) {
+            newErrors.name = 'Full name is required';
+        }
+        if (!email.trim()) {
+            newErrors.email = 'Email is required';
+        } else {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                newErrors.email = 'Enter a valid email address';
+            }
+        }
+        if (!password) {
+            newErrors.password = 'Password is required';
+        } else if (password.length < 6) {
+            newErrors.password = 'Password must be at least 6 characters';
+        }
+        if (!confirmPassword) {
+            newErrors.confirmPassword = 'Confirm your password';
+        } else if (password !== confirmPassword) {
+            newErrors.confirmPassword = 'Passwords do not match';
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const handleProviderSignup = async () => {
+        if (!validate()) return;
+
+        setLoading(true);
+        try {
+            // simulate signup api
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+            navigation.navigate('FormDetail');
+        } catch (error) {
+            setErrors({ general: 'Something went wrong, please try again' });
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <View style={styles.container}>
             {/* Title */}
@@ -29,6 +82,7 @@ export default function SignupScreenProvider({ navigation }) {
                 style={[
                     styles.inputContainer,
                     focusedField === 'name' && styles.inputFocused,
+                    errors.name && styles.inputError,
                 ]}
             >
                 <Icon
@@ -41,16 +95,20 @@ export default function SignupScreenProvider({ navigation }) {
                     style={styles.input}
                     placeholder="Full Name"
                     placeholderTextColor={colors.textSecondary}
+                    value={name}
+                    onChangeText={setName}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
                 />
             </View>
+            {errors.name && <Text style={styles.errorText}>{errors.name}</Text>}
 
             {/* Email Input */}
             <View
                 style={[
                     styles.inputContainer,
                     focusedField === 'email' && styles.inputFocused,
+                    errors.email && styles.inputError,
                 ]}
             >
                 <Icon
@@ -64,16 +122,21 @@ export default function SignupScreenProvider({ navigation }) {
                     placeholder="Email"
                     placeholderTextColor={colors.textSecondary}
                     keyboardType="email-address"
+                    autoCapitalize="none"
+                    value={email}
+                    onChangeText={setEmail}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
                 />
             </View>
+            {errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
 
             {/* Password Input */}
             <View
                 style={[
                     styles.inputContainer,
                     focusedField === 'password' && styles.inputFocused,
+                    errors.password && styles.inputError,
                 ]}
             >
                 <Icon
@@ -87,6 +150,8 @@ export default function SignupScreenProvider({ navigation }) {
                     placeholder="Password"
                     placeholderTextColor={colors.textSecondary}
                     secureTextEntry={!passwordVisible}
+                    value={password}
+                    onChangeText={setPassword}
                     onFocus={() => setFocusedField('password')}
                     onBlur={() => setFocusedField(null)}
                 />
@@ -98,18 +163,24 @@ export default function SignupScreenProvider({ navigation }) {
                     />
                 </TouchableOpacity>
             </View>
+            {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
 
             {/* Confirm Password Input */}
             <View
                 style={[
                     styles.inputContainer,
                     focusedField === 'confirmPassword' && styles.inputFocused,
+                    errors.confirmPassword && styles.inputError,
                 ]}
             >
                 <Icon
                     name="lock-closed-outline"
                     size={20}
-                    color={focusedField === 'confirmPassword' ? colors.primary : colors.textSecondary}
+                    color={
+                        focusedField === 'confirmPassword'
+                            ? colors.primary
+                            : colors.textSecondary
+                    }
                     style={styles.icon}
                 />
                 <TextInput
@@ -117,6 +188,8 @@ export default function SignupScreenProvider({ navigation }) {
                     placeholder="Confirm Password"
                     placeholderTextColor={colors.textSecondary}
                     secureTextEntry={!confirmPasswordVisible}
+                    value={confirmPassword}
+                    onChangeText={setConfirmPassword}
                     onFocus={() => setFocusedField('confirmPassword')}
                     onBlur={() => setFocusedField(null)}
                 />
@@ -130,12 +203,21 @@ export default function SignupScreenProvider({ navigation }) {
                     />
                 </TouchableOpacity>
             </View>
+            {errors.confirmPassword && (
+                <Text style={styles.errorText}>{errors.confirmPassword}</Text>
+            )}
 
             {/* Signup Button */}
-            <TouchableOpacity style={styles.signupButton}
+            <TouchableOpacity
+                style={styles.signupButton}
                 onPress={handleProviderSignup}
+                disabled={loading}
             >
-                <Text style={styles.signupButtonText}>Sign Up</Text>
+                {loading ? (
+                    <ActivityIndicator size="small" color="#fff" />
+                ) : (
+                    <Text style={styles.signupButtonText}>Sign Up</Text>
+                )}
             </TouchableOpacity>
 
             {/* Or Divider */}
@@ -145,7 +227,7 @@ export default function SignupScreenProvider({ navigation }) {
                 <View style={styles.divider} />
             </View>
 
-            {/* Social Signup Buttons with Images */}
+            {/* Social Signup Buttons */}
             <View style={styles.socialContainer}>
                 <TouchableOpacity style={styles.socialButton}>
                     <Image
@@ -167,7 +249,7 @@ export default function SignupScreenProvider({ navigation }) {
                 </TouchableOpacity>
             </View>
 
-            {/* Login Redirect Text */}
+            {/* Login Redirect */}
             <View style={styles.loginContainer}>
                 <Text style={styles.loginText}>Already have an account? </Text>
                 <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
@@ -208,7 +290,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 14,
         paddingHorizontal: 12,
-        marginBottom: 18,
+        marginBottom: 5,
         backgroundColor: colors.cardBackground,
         shadowColor: '#000',
         shadowOpacity: 0.05,
@@ -223,6 +305,9 @@ const styles = StyleSheet.create({
         shadowRadius: 8,
         elevation: 4,
     },
+    inputError: {
+        borderColor: 'red',
+    },
     icon: {
         marginRight: 10,
     },
@@ -232,12 +317,18 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: colors.textPrimary,
     },
+    errorText: {
+        color: 'red',
+        fontSize: 12,
+        marginBottom: 12,
+        marginLeft: 5,
+    },
     signupButton: {
         backgroundColor: colors.primary,
         paddingVertical: 15,
         borderRadius: 14,
         alignItems: 'center',
-        marginTop: 5,
+        marginTop: 10,
         shadowColor: colors.primary,
         shadowOpacity: 0.2,
         shadowRadius: 6,

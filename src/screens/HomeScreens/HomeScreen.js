@@ -15,6 +15,7 @@ const banners = [
   { id: '4', image: require('../../../assets/banner/banner4.png') },
 ];
 
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // backgroundColor: colors.background || '#a03434',
-    backgroundColor:"#fff",
+    backgroundColor: "#fff",
     // marginTop: 30,
   },
 });
