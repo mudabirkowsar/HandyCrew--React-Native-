@@ -11,7 +11,8 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from '../../../firebase/firebaseConfig';
+import { auth, db } from '../../../firebase/firebaseConfig';
+import { doc, setDoc } from 'firebase/firestore';
 
 export default function SignupScreen({ navigation }) {
   const [name, setName] = useState('');
@@ -69,6 +70,14 @@ export default function SignupScreen({ navigation }) {
         setLoading(true); // ✅ start loading
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(userCredential.user, { displayName: name });
+        const user = userCredential.user;
+        await setDoc(doc(db, "users", user.uid), {
+          name,
+          email,
+          coins: 50,
+          createdAt: new Date()
+        })
+
         navigation.replace("TabNavigation");
       } catch (error) {
         console.log("Error", error.message);

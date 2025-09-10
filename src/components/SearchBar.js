@@ -1,5 +1,5 @@
 // src/components/SearchBar.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -14,11 +14,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import colors from '../config/colors';
+import { auth, db } from '../../firebase/firebaseConfig';
+import { doc, getDoc } from 'firebase/firestore';
 
 export default function SearchBar() {
   const [focused, setFocused] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const borderAnim = useState(new Animated.Value(0))[0];
+
+  const [coins, setCoins] = useState(null)
 
   const handleFocus = () => {
     setFocused(true);
@@ -43,6 +47,25 @@ export default function SearchBar() {
     outputRange: [colors.border, colors.primary],
   });
 
+  useEffect(() => {
+    const fetchCoins = async () => {
+      try {
+        const user = auth.currentUser;
+        if (user) {
+          const docRef = doc(db, "users", user.uid);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            setCoins(docSnap.data().coins)
+          }
+        }
+      } catch (error) {
+        console.log("Error", error.message)
+      }
+    }
+    fetchCoins();
+  }, [])
+
   return (
     <View style={styles.outerContainer}>
       {/* Top Row */}
@@ -65,7 +88,7 @@ export default function SearchBar() {
           onPress={() => setModalVisible(true)}
         >
           <FontAwesome5 name="coins" size={14} color="#FFD700" />
-          <Text style={styles.coinText}>100</Text>
+          <Text style={styles.coinText}>{coins}</Text>
         </TouchableOpacity>
       </View>
 
@@ -142,7 +165,7 @@ const styles = StyleSheet.create({
   locationContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#4ebe52', // green shade
+    backgroundColor: '#4ebe52',
     paddingHorizontal: 12,
     paddingVertical: 5,
     borderRadius: 20,

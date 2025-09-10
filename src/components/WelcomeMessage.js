@@ -6,7 +6,7 @@ import useAuth from '../../hooks/useAuth';
 
 export default function WelcomeMessage() {
 
-  const {username} = useAuth()
+  const { username } = useAuth()
 
   return (
     <View style={styles.container}>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 20,
     marginTop: 20,
-    marginBottom:20,
+    marginBottom: 20,
   },
   greeting: {
     fontSize: 32,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: colors.primary,
-    fontStyle:'italic'
+    fontStyle: 'italic'
   },
   accentLine: {
     width: 60, // length of the line
